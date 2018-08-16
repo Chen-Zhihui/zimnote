@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T19:49:50+08:00
+
+====== machine learning ======
+Created 星期四 16 八月 2018
+
+====== method ======
+
+[[+k-mean]]
+[[+knn]]
+[[+pca]]
+[[+em]]
+[[+svm]]
+[[+linear_regression]]
+[[+reception]]
+[[+logistic_regression]]
+[[+decision_tree]]
+[[+navie_bayes]]
+
+
+| method  | regression | classification | clustering |  feature  | other |
+|:-------:|:----------:|:--------------:|:----------:|:---------:|:-----:|
+| +k-mean |            |                |            |           |       |
+|  +PCA   |            |                |            | reduction |       |
+|   KNN   |            |                |            |           |       |
+
+
+====== keyword ======
+loss
+risk

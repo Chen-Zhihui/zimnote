@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T19:47:08+08:00
+
+====== cv ======
+Created 星期四 16 八月 2018
+
+[[+annotation-tool]]
+[[+alg-playground]]
+[[+deploy]]
+[[+deeplearning]]
+[[+tasks]]
+	[[+segment]]
+	[[+classfy]]
+	[[+detect]]
+	
+	
