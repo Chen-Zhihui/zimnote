@@ -22,3 +22,9 @@ Created 星期四 16 八月 2018
 	[[+devtools:office:zotero]]
 	[[+devtools:viz-2d]]
 
+
+[[+SomeDay]]
+[[+Archive]]
+[[+INBOX]]
+
+
