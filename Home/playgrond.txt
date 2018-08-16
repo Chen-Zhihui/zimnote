@@ -10,4 +10,8 @@ git : Shift+Ctrl+S
 [[+screenshot]]
 [[+links]]
 [[+tasklist]]
+[[+GTD]]
+[[+zim]]
+
+
 

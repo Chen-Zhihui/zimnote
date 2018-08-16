@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T20:52:54+08:00
+
+====== home chores ======
+Created 星期四 16 八月 2018
+
+[[+child]]
+[[+house]]
+[[+health]]

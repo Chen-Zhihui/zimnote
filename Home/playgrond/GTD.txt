@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T20:59:28+08:00
+
+====== GTD ======
+Created 星期四 16 八月 2018
+
+'''
+  INBOX
++ Projects
+  |-- Chores
+  |-- Current project 1
+  `-- Current project 2
++ SomeDay
+  |-- Idea 1
+  `-- Idea 2
++ Trash
+  |-- Old project 1
+  `-- Old project 2
+'''
+
+[[+inbox]]
+[[+projects]]
+[[+some_day]]
+[[+trash]]

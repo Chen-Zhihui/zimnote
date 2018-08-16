@@ -6,13 +6,14 @@ Creation-Date: 2018-08-16T18:13:03+08:00
 Created 星期四 16 八月 2018
 
 [[+playgrond]]
-[[+plugins]] 
-[[+viz-2d]]
+[[+playgrond:zim]] 
 
-[[+card]]
-[[+face]]
-[[+cv]]
+[[+projects]]
+	[[+projects:viz-2d]]
+	[[+projects:card]]
+	[[+projects:face]]
+	[[+projects:cv]]
+	[[+projects:machine learning]]
+	[[+projects:opt]]
+	[[+projects:home chores]]
 
-
-[[+machine_learning]]
-[[+opt]]

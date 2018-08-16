@@ -5,9 +5,21 @@ Creation-Date: 2018-08-16T18:30:28+08:00
 ====== tasklist ======
 Created 星期四 16 八月 2018
 
+ML: read @phone 
+CPP: expected @pc 
+TODO: ddff @home  
+CPP: Rxcpp @cdv  
+ML: note @home @cdv  
+CV: note @cdv 
+$: todo @onroad 
 
-TODO: ddff @home
-FIXME: ffdd <2018-08-15 @road 
-
-
+TODO: @home
+[ ] test
+[ ] checkbox
+	[ ] Organize party 
+		[ ] Send invitations by first of month 
+		[ ] Cleanup living room
+			[ ] Get rid of moving boxes 
+			[ ] Buy vacuum cleaner 
+		[ ] Buy food & drinks
 
