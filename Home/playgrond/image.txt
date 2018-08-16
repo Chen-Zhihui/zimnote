@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T18:14:18+08:00
+
+====== image ======
+Created 星期四 16 八月 2018
+
+{{.\BingWallpaper-2018-08-07.jpg}}
