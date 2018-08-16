@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-16T18:16:29+08:00
+
+====== 星期四 16 8月 2018 ======
+
+[ ] use zim as wiki
+[ ] find back :ASAP
