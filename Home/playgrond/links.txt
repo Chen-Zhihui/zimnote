@@ -9,8 +9,6 @@ gnuplot http://www.gnuplot.info/
 
 wikipedia [[wp?apple]]
 
-[[:ASAP]]
+:ASAP
 
-?ASAP
-
-[[Home:viz-2d:MITK]]
+[[viz-2d:ASAP]]
