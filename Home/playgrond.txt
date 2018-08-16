@@ -11,7 +11,7 @@ git : Shift+Ctrl+S
 [[+links]]
 [[+tasklist]]
 [[+GTD]]
-[[+zim]]
+[[devtools:office:zim]]
 
 
 

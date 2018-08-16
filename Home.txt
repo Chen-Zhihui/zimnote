@@ -6,14 +6,19 @@ Creation-Date: 2018-08-16T18:13:03+08:00
 Created 星期四 16 八月 2018
 
 [[+playgrond]]
-[[+playgrond:zim]] 
+[[+devtools:office:zim]] 
 
 [[+projects]]
-	[[+projects:viz-2d]]
+	[[+devtools:viz-2d]]
 	[[+projects:card]]
 	[[+projects:face]]
 	[[+projects:cv]]
 	[[+projects:machine learning]]
 	[[+projects:opt]]
 	[[+projects:home chores]]
+
+[[+devtools]]
+	[[+devtools:office:zim]]
+	[[+devtools:office:zotero]]
+	[[+devtools:viz-2d]]
 

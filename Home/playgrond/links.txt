@@ -11,4 +11,4 @@ wikipedia [[wp?apple]]
 
 :ASAP
 
-[[viz-2d:ASAP]]
+viz-2d:ASAP
