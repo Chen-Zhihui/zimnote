@@ -5,10 +5,17 @@ Creation-Date: 2018-08-16T21:51:59+08:00
 ====== projects ======
 Created 星期四 16 八月 2018
 
-[[+card]]
+目标：
+* 以 [[+face]] 相关问题为先导，涉及到 [[+cv]] , [[+ml]] , devtools 的问题时分别做为专题处理，分别归类即可
+* [[+card]]
+* [[+ebox]]
+* [[+home_chores]]
+
+[[+face]] 
+这是最主要的成果，要尽快开展，等出一部分成果之后，再扩展，向全面方向发展
+
 [[+cv]]
-[[+face]]
-[[+home_chores]]
 [[+machine_learning]]
 [[+opt]]
-[[+ebox]]
+[[devtools:qt-gui]]
+[[devtools:viz-2d]]
