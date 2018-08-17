@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T16:54:21+08:00
+
+====== devtools ======
+Created 星期五 17 八月 2018
+
+[[+office]]
+[[+viz-2d]]
+[[+qt-gui]]

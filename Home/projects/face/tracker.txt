@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T13:42:15+08:00
+
+====== tracker ======
+Created 星期五 17 八月 2018
+
+
+MTL中的实现
+https://github.com/mltframework/mlt/blob/master/src/modules/opencv/filter_opencv_tracker.cpp
+
+OpenCV中的API
+https://docs.opencv.org/3.1.0/d9/df8/group__tracking.html
+
+

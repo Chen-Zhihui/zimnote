@@ -6,3 +6,57 @@ Creation-Date: 2018-08-16T18:25:00+08:00
 Created 星期四 16 八月 2018
 
 http://mitk.org/wiki/MITK
+https://github.com/MITK/MITK
+
+====== 标注 ======
+
+视图内有一个标准尺寸，所有的测量都以这个尺寸计算
+
+====== 3rd Party libs ======
+
+[*] ACVD
+[*] [[BlueBerryDocTools]]
+[*] Breakpad
+[*] CTK
+[*] [[CabelSwig]]
+[*] Eigen
+[*] HDFS
+[*] [[InsightToolkit]]
+[*] MITK-Data
+[*] [[MatchPoint]]
+[*] [[OpenCV]]
+[*] [[OpenIGTLink]]
+[*] Python
+[*] [[PythonQt]]
+[*] SOFA
+[*] [[SimpleITK]]
+[*] VTK
+[*] ann-cmake
+[*] ann
+[*] boost
+[*] cppunit
+[*] dcmqi
+[*] dcmtk
+[*] doxygen
+[*] freeglut
+[*] gdcm
+[*] glew
+[*] glew-cmake
+[*] hdf5
+[*] libqxt
+[*] matlab-cli
+[*] numpy
+[*] patch.exe
+[*] pcre
+[*] poco
+[*] python-cmake-buildsystem
+[*] qRestAPI
+[*] qwt
+[*] raptor2
+[*] rasqal
+[*] redland
+[*] swig
+[*] tinyxml
+[*] vigra
+[*] vtkVmtk
+[*] zlib

@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T13:37:39+08:00
+
+====== detector ======
+Created 星期五 17 八月 2018
+
+min_width
+
+
+OpenCV’s HAAR face detector
+
+code from OpenFace
+{{{code: lang="cpp" linenumbers="True"
+    bool DetectFaces(vector<cv::Rect_<float> >& o_regions, const cv::Mat_<uchar>& intensity, float min_width, cv::Rect_<float> roi)
+	{
+		cv::CascadeClassifier classifier("./classifiers/haarcascade_frontalface_alt.xml");
+		if (classifier.empty())
+		{
+			cout << "Couldn't load the Haar cascade classifier" << endl;
+			return false;
+		}
+		else
+		{
+			return DetectFaces(o_regions, intensity, classifier, min_width, roi);
+		}
+	}
+
+	bool DetectFaces(vector<cv::Rect_<float> >& o_regions, const cv::Mat_<uchar>& intensity, cv::CascadeClassifier& classifier, float min_width, cv::Rect_<float> roi)
+	{
+	    //roi是一个参考参数，只选择roi这内的结果
+
+		vector<cv::Rect> face_detections;
+		if (min_width == -1)
+		{
+			classifier.detectMultiScale(intensity, face_detections, 1.2, 2, 0, cv::Size(50, 50));
+		}
+		else
+		{
+			classifier.detectMultiScale(intensity, face_detections, 1.2, 2, 0, cv::Size(min_width, min_width));
+		}
+
+		// Convert from int bounding box do a double one with corrections
+		for (size_t face = 0; face < face_detections.size(); ++face)
+		{
+			// OpenCV is overgenerous with face size and y location is off
+			// CLNF detector expects the bounding box to encompass from eyebrow to chin in y, and from cheeck outline to cheeck outline in x, so we need to compensate
+
+			// The scalings were learned using the Face Detections on LFPW, Helen, AFW and iBUG datasets, using ground truth and detections from openCV
+			cv::Rect_<float> region;
+			// Correct for scale
+			region.width = face_detections[face].width * 0.8924f;
+			region.height = face_detections[face].height * 0.8676f;
+
+			// Move the face slightly to the right (as the width was made smaller)
+			region.x = face_detections[face].x + 0.0578f * face_detections[face].width;
+			// Shift face down as OpenCV Haar Cascade detects the forehead as well, and we're not interested
+			region.y = face_detections[face].y + face_detections[face].height * 0.2166f;
+
+			if (min_width != -1)
+			{
+				if (region.width < min_width || region.x < ((float)intensity.cols) * roi.x || region.y < ((float)intensity.cols) * roi.y ||
+					region.x + region.width >((float)intensity.cols) * (roi.x + roi.width) || region.y + region.height >((float)intensity.rows) * (roi.y + roi.height))
+					continue;
+			}
+
+
+			o_regions.push_back(region);
+		}
+		return o_regions.size() > 0;
+	}
+}}}
+

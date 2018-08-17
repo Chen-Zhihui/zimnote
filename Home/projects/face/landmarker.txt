@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T14:48:42+08:00
+
+====== landmarker ======
+Created 星期五 17 八月 2018
+
+landmark using opencv
+https://www.learnopencv.com/facemark-facial-landmark-detection-using-opencv/

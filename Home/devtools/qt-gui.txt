@@ -1,0 +1,88 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T16:54:40+08:00
+
+====== qt-gui ======
+Created 星期五 17 八月 2018
+
+====== People ======
+* Skycoder42 专注Qt界面，QML和Widget
+https://github.com/Skycoder42
+此人近两年非常活跃，做客户端软件，先参考此人作品
+
+====== Package ======
+qpm 
+qpmx https://github.com/Skycoder42/qpmx
+
+===== QIF =====
+QtIFW-Advanced-Setup 在工程文件中制作安装包
+https://github.com/Skycoder42/QtIFW-Advanced-Setup
+
+====== AppFrm ======
+
+===== QtMvvm =====
+[ ] 尝试：用这个库实现一些简单的操作界面还是很好的，千万别用于做应用框架，后期自定义控件是会很有困难
+Understanding how QtMvvm works
+The general idea is the following: You create **viewmodels** in your core project, which represent uis. They typically contain all the properties relevant for the ui, methods (slots) that can be called (e.g. on a button click) and signals to inform the ui about changes and other events. Thus, you can use the as ui "placeholders". Of course, They only contain the ui logic, not the actual uis.
+The CoreApp is what's reponsible for managing those viewmodels. Showing a viewmodel, as well as messages (alert dialogs) are all controlled by the coreapp. The coreapp uses a so called presenters to create the actual uis. The presenters are located in the ui projects and they are the most complicated part. Their main task is to find ui implementations for viewmodel (called views), and manage the life cycle as well as the presentation of those real views. The presenters are where the decision is made, how a specific view should be shown.
+The views are whatever you need to create actual uis. This depends on the presenter used, since the presenter selects the views. Each ui type has their own way to create those views, but they all have in commmon that the views themselves do not control the application. When a viewmodel gets shown, a new view is created and the viewmodel passed to it. Once the views was closed, the view and the viewmodel get deleted again. Views and ViewModels are temporary and should only use the viewmodel to interact with other parts of the application.
+https://skycoder42.github.io/QtMvvm/
+
+====== Settings ======
+[[QSettingsGenerator]] 给应用生成一个xml的配置，并转化为代码
+https://github.com/Skycoder42/QSettingsGenerator
+
+====== DebugTool ======
+
+===== Qt-Inspector =====
+
+====== PropertyEditor ======
+最终用户界面用的属性编辑功能，和开发用的属性编辑功能可以不同，
+	开发时简单有效，参数多
+	最终应用中属性少，简单要美观
+	
+
+===== QtPropertyBrowser =====
+https://github.com/abhijitkundu/QtPropertyBrowser
+具用cmake支持
+
+===== Jsoncomposer =====
+ Json编辑器，可用，但不能用于最终用户界面
+https://github.com/soundsrc/JsonComposer
+
+===== kproperty =====
+ 在Windows上不能编译
+https://github.com/KDE/kproperty
+Anagiwahst 建立在kproperty之上的属性编辑器 
+https://github.com/Buschtrommel/Anagiwahst
+
+===== QtnProperty =====
+https://github.com/lexxmark/QtnProperty
+一个属性框架，在框架基础上定义了属性定义文件，生成相应的代码，可编译到软件中
+[ ] 尝试：在QtnProperty基础上增加导入导出JSON的功能，就可以用做工程开发。后台逻辑<-->Json<-->QtnProperty三者之间连接起来。后台逻辑用的是一组复制参数，前台界面显示的是一组简单参数，用Poco的Layer合并在一起
+
+====== Template ======
+
+===== Grantlee =====
+[ ] 尝试：在文本编辑器中编辑带有标记的文本，然后将标记生成相应的数据，用于不同界面的显示，实现一个类似于wiki编辑器的工具，以回车做分割符，每段做一个单独的处理，编辑只编辑当前一段，其他段落都是根据相应的模板生成出来的，做成一个NLP的标注工具
+[ ] 尝试：写一个json文件，记录参数的全部详细信息，然后用模板处理一下，生成一些C++代码
+The goal of Grantlee Templates is to make it easier for application developers to separate the structure of documents from the data they contain, opening the door for theming and advanced generation of other text such as code. The syntax uses the syntax of the Django template system, and the core design of Django is reused in Grantlee.
+{{{code: lang="html" linenumbers="True"
+<ul>
+{% for athlete in athlete_list %}
+<li> athlete.name {% if athlete.isCaptain %} (C){% endif %}</li>
+{% endfor %}
+</ul>
+}}}
+
+Part of the design of both template systems is that application developers can extend the syntax by implementing their own tags and filters. For details of how to do that, see the API documentation.
+https://github.com/steveire/grantlee.git
+
+====== Game ======
+[[+Game]]
+
+====== Resource ======
+
+===== icon =====
+http://www.fatcow.com/free-icons
+

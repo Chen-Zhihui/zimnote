@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-17T16:25:13+08:00
+
+====== people ======
+Created 星期五 17 八月 2018
+
+* http://www.zeusee.com 
+一个公司，开放了人脸检测和活体检测的一些代码，重构了face++和小米的检测
+https://github.com/zeusees
+
+* 小米-李庆源
+https://github.com/lippman1125
+tracker, detector
+
+
