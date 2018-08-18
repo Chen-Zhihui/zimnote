@@ -14,49 +14,56 @@ https://github.com/MITK/MITK
 
 ====== 3rd Party libs ======
 
-[*] ACVD
+
+[*] poco @vcpkg 
+[ ] dcmtk, @mitk 
+[ ] [[OpenIGTLink]] @mitk 
+[*] tinyxml, 2.6.2, @vcpkg 
+[*] gdcm, @vcpkg 
+[ ] GLUT @mitk 
+[ ] raptor2 @mitk 
+[*] Eigen @vcpkg 
+[ ] ANN @mitk 
+[*] cppunit, @vcpkg 
+[*] pcre @vcpkg 
+[*] zlib @vcpkg 
+[*] hdf5 @vcpkg 
+[*] [[BetData]] @mitk 
+[ ] swig @mitk 
+[*] Python
+[*] numpy
+[*] [[OpenCV]]
+[ ] vigra @mitk 
+
+hard deps
+[ ] ITK @mitk 
+[*] VTK @vcpkg 
+[*] boost, @vcpkg 
+[ ] [[SimpleITK]] @mitk 
+[ ] ACVD @mitk 
+[ ] CTK, @mitk 
+[ ] rasqal @mitk 
+[ ] redland @mitk 
+[ ] dcmqi @mitk 
+[ ] [[MatchPoint]] @mitk 
+[*] qwt @vcpkg 
+
 [*] [[BlueBerryDocTools]]
 [*] Breakpad
-[*] CTK
 [*] [[CabelSwig]]
-[*] Eigen
-[*] HDFS
 [*] [[InsightToolkit]]
 [*] MITK-Data
-[*] [[MatchPoint]]
-[*] [[OpenCV]]
-[*] [[OpenIGTLink]]
-[*] Python
 [*] [[PythonQt]]
 [*] SOFA
-[*] [[SimpleITK]]
-[*] VTK
 [*] ann-cmake
 [*] ann
-[*] boost
-[*] cppunit
-[*] dcmqi
-[*] dcmtk
 [*] doxygen
 [*] freeglut
-[*] gdcm
 [*] glew
 [*] glew-cmake
-[*] hdf5
 [*] libqxt
 [*] matlab-cli
-[*] numpy
 [*] patch.exe
-[*] pcre
-[*] poco
 [*] python-cmake-buildsystem
 [*] qRestAPI
-[*] qwt
-[*] raptor2
-[*] rasqal
-[*] redland
-[*] swig
-[*] tinyxml
-[*] vigra
 [*] vtkVmtk
-[*] zlib

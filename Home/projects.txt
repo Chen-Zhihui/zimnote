@@ -6,7 +6,7 @@ Creation-Date: 2018-08-16T21:51:59+08:00
 Created 星期四 16 八月 2018
 
 目标：
-* 以 [[+face]] 相关问题为先导，涉及到 [[+cv]] , [[+ml]] , devtools 的问题时分别做为专题处理，分别归类即可
+* 以 [[+face]] 相关问题为先导，涉及到 [[+cv]] , [[+machine_learning]] , devtools 的问题时分别做为专题处理，分别归类即可
 * [[+card]]
 * [[+ebox]]
 * [[+home_chores]]
