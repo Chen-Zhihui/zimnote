@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-20T15:47:07+08:00
+
+====== CTK ======
+Created 星期一 20 八月 2018
+
+CTK中生成python绑定的代码，在Windows上不能正常编译，问题在导出的函数名称不对
+
+Windows编译过程中使用了
+Found PythonLibs: C:/Users/tony/Anaconda3/libs/python36.lib (found suitable exact version "3.6.5")
+没有使用cmake中指定的python版本，所有出现了不一致的问题

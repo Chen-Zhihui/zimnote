@@ -15,3 +15,5 @@ https://docs.opencv.org/3.1.0/d9/df8/group__tracking.html
 [[MultiTracker]] by [[OpenCV]]
 https://www.learnopencv.com/multitracker-multiple-object-tracking-using-opencv-c-python/
 
+GOTURN: dl based track
+https://www.learnopencv.com/goturn-deep-learning-based-object-tracking/

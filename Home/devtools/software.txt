@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-19T22:23:16+08:00
+
+====== software ======
+Created 星期日 19 八月 2018
+
+容易获得的小软件一律不保存
+保存条件：
+* 比较大，联网获到困难
+* 破解
+* 成组软件，逐个下载麻烦
+
+====== Android ======
+	ndk-r15-linux
+	sdk-r24.4-linux
+	crystax-ndk-10.3.2-linux
+	
+====== offfice ======
+	firefox
+	vmware
+	xme4
+	xmind
+	teamviewer
+
+====== devtools ======
+libs
+	opencv
+	boost
+mac
+	command line tools
+	xcode
+mathematica
+smartdraw
+smartgit
+tecplot
+uml
+understand
+vc
+doxygen
+
+====== mm ======
+	ffmpeg
+	shotcut
+	[[QtAV]]
+	Blackmagic
+	Adobe
+	[[OpenShot]]
+	MC
+

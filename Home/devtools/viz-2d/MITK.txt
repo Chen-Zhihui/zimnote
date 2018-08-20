@@ -71,3 +71,33 @@ hard deps
 [*] python-cmake-buildsystem
 [*] qRestAPI
 [*] vtkVmtk
+
+_ctk_set_python_extension_symbol_visibility
+macro(ctkMacroBuildLibWrapper)
+
+if(CTK_WRAP_PYTHONQT_LIGHT)
+  ctkMacroBuildLibWrapper(
+	TARGET ${PROJECT_NAME}
+	SRCS ${KIT_SRCS}
+	WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
+	)
+endif()
+没有那个输出，说明没有那个函数，导出符号已经设置好了
+查下有导出符号的
+  set(KIT_PYTHONQT_SRCS) # Clear variable
+  **ctkMacroWrapPythonQt**(${MY_NAMESPACE} ${lib_name}
+	KIT_PYTHONQT_SRCS "${MY_SRCS}" FALSE ${HAS_DECORATOR})
+  if(HAS_DECORATOR)
+	list(APPEND KIT_PYTHONQT_SRCS ${DECORATOR_HEADER})
+	if (CTK_QT_VERSION VERSION_GREATER "4")
+	  qt5_wrap_cpp(KIT_PYTHONQT_SRCS ${DECORATOR_HEADER} OPTIONS -f${DECORATOR_HEADER})
+	else()
+	  QT4_WRAP_CPP(KIT_PYTHONQT_SRCS ${DECORATOR_HEADER} OPTIONS -f${DECORATOR_HEADER})
+	endif()
+  endif()
+  add_library(${lib_name}PythonQt ${MY_WRAPPER_LIBRARY_TYPE} ${KIT_PYTHONQT_SRCS})
+
+*** ctkMacroBuildLibWrapper 这个，或是CTK_WRAP_PYTHONQT_LIGHT有问题，CTK的动态库都没生成，vtk都生成了
+*** ctkMacroWrapPythonQt
+*** _ctk_set_python_extension_symbol_visibility
+*** _ctk_set_python_extension_symbol_visibility
