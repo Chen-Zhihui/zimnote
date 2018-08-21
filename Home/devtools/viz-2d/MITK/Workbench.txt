@@ -1,0 +1,135 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-21T15:16:47+08:00
+
+====== Workbench ======
+Created 星期二 21 八月 2018
+
+====== mitkBaseApplication ======
+:: public Poco::Util::Application
+
+===== init =====
+{{{code: lang="cpp" linenumbers="True"
+ void BaseApplication::initialize(Poco::Util::Application &self)
+  {
+    // 1. Call the super-class method
+    Poco::Util::Application::initialize(self);
+
+    // 2. Initialize the Qt framework (by creating a QCoreApplication)
+    this->initializeQt();
+
+    // 3. Seed the random number generator, once at startup.
+    QTime time = QTime::currentTime();
+    qsrand((uint)time.msec());
+
+    // 4. Load the "default" configuration, which involves parsing
+    //    an optional <executable-name>.ini file and parsing any
+    //    command line arguments
+    this->loadConfiguration();
+
+    // 5. Add configuration data from the command line and the
+    //    optional <executable-name>.ini file as CTK plugin
+    //    framework properties.
+    d->initializeCTKPluginFrameworkProperties(this->config());
+
+  // 6. Initialize splash screen if an image path is provided
+  //    in the .ini file
+  this->initializeSplashScreen(qApp);
+
+  // 7. Set the custom CTK Plugin Framework storage directory
+    QString storageDir = this->getCTKFrameworkStorageDir();
+    if (!storageDir.isEmpty())
+    {
+      d->m_FWProps[ctkPluginConstants::FRAMEWORK_STORAGE] = storageDir;
+    }
+
+  // 8. Set the library search paths and the pre-load library property
+    this->initializeLibraryPaths();
+    QStringList preloadLibs = this->getPreloadLibraries();
+    if (!preloadLibs.isEmpty())
+    {
+      d->m_FWProps[ctkPluginConstants::FRAMEWORK_PRELOAD_LIBRARIES] = preloadLibs;
+    }
+
+  // 9. Initialize the CppMicroServices library.
+    //    The initializeCppMicroServices() method reuses the
+    //    FRAMEWORK_STORAGE property, so we call it after the
+    //    getCTKFrameworkStorageDir method.
+    this->initializeCppMicroServices();
+
+  // 10. Parse the (optional) provisioning file and set the
+    //    correct framework properties.
+    d->parseProvisioningFile(this->getProvisioningFilePath());
+
+    // Finally, set the CTK Plugin Framework properties
+    ctkPluginFrameworkLauncher::setFrameworkProperties(d->m_FWProps);
+  }
+}}}
+
+
+===== init QApplication =====
+{{{code: lang="cpp" linenumbers="True"
+  QCoreApplication *BaseApplication::getQApplication() const
+  {
+    QCoreApplication *qCoreApp = qApp;
+
+    if (nullptr == qCoreApp)
+    {
+      vtkOpenGLRenderWindow::SetGlobalMaximumNumberOfMultiSamples(0);
+
+      auto defaultFormat = QVTKOpenGLWidget::defaultFormat();
+      defaultFormat.setSamples(0);
+      QSurfaceFormat::setDefaultFormat(defaultFormat);
+
+#ifdef Q_OS_OSX
+      QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+#endif
+
+      QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+
+      if (this->getSingleMode())
+      {
+        qCoreApp = new QmitkSingleApplication(d->m_Argc, d->m_Argv, getSafeMode());
+      }
+      else
+      {
+        auto safeApp = new QmitkSafeApplication(d->m_Argc, d->m_Argv);
+        safeApp->setSafeMode(d->m_SafeMode);
+        qCoreApp = safeApp;
+      }
+      d->m_QApp.reset(qCoreApp);
+    }
+
+    return qCoreApp;
+  }
+}}}
+
+
+
+===== main =====
+{{{code: lang="cpp" linenumbers="True"
+  int BaseApplication::main(const std::vector<std::string> &args)
+  {
+    // Start the plugin framework and all installed plug-ins according with
+    // their auto-start setting.
+    QStringList arguments;
+
+    for (auto const &arg : args)
+    {
+      arguments.push_back(QString::fromStdString(arg));
+    }
+
+    if (d->m_Splashscreen != nullptr)
+    {
+      // a splash screen is displayed,
+      // creating the closing callback
+      d->m_SplashscreenClosingCallback = new SplashCloserCallback(d->m_Splashscreen);
+    }
+
+    return ctkPluginFrameworkLauncher::run(d->m_SplashscreenClosingCallback, QVariant::fromValue(arguments)).toInt();
+  }
+}}}
+
+
+
+

@@ -16,12 +16,14 @@ Created 星期日 19 八月 2018
 	sdk-r24.4-linux
 	crystax-ndk-10.3.2-linux
 	
+
 ====== offfice ======
 	firefox
 	vmware
 	xme4
 	xmind
 	teamviewer
+
 
 ====== devtools ======
 libs
@@ -37,6 +39,10 @@ tecplot
 uml
 understand
 vc
+https://www.visualstudio.com/zh-hans/downloads/
+提供最新的试用版 2017新版，工具很丰富
+
+6XMXN-6CY8R-74G3R-KR6TY-92D9Y for VS 2015
 doxygen
 
 ====== mm ======

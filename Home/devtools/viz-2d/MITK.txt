@@ -12,65 +12,69 @@ https://github.com/MITK/MITK
 
 视图内有一个标准尺寸，所有的测量都以这个尺寸计算
 
+====== 编译 ======
+CTK fix for python
+BOOST_ROOT = E:\ws.local\boost_1_68_0_b1_rc2
+
+====== Code ======
+* [[+Workbench]]
+* [[+QmitkAboutDialog]]
+
 ====== 3rd Party libs ======
 
 
-[*] poco @vcpkg 
-[ ] dcmtk, @mitk 
-[ ] [[OpenIGTLink]] @mitk 
-[*] tinyxml, 2.6.2, @vcpkg 
-[*] gdcm, @vcpkg 
-[ ] GLUT @mitk 
-[ ] raptor2 @mitk 
-[*] Eigen @vcpkg 
-[ ] ANN @mitk 
-[*] cppunit, @vcpkg 
-[*] pcre @vcpkg 
-[*] zlib @vcpkg 
-[*] hdf5 @vcpkg 
-[*] [[BetData]] @mitk 
-[ ] swig @mitk 
-[*] Python
-[*] numpy
-[*] [[OpenCV]]
-[ ] vigra @mitk 
+* poco @vcpkg 
+* dcmtk, @mitk 
+* [[OpenIGTLink]] @mitk 
+* tinyxml, 2.6.2, @vcpkg 
+* gdcm, @vcpkg 
+* GLUT @mitk 
+* raptor2 @mitk 
+* Eigen @vcpkg 
+* ANN @mitk 
+* cppunit, @vcpkg 
+* pcre @vcpkg 
+* zlib @vcpkg 
+* hdf5 @vcpkg 
+* [[BetData]] @mitk 
+* swig @mitk 
+* Python
+* numpy
+* [[OpenCV]]
+* vigra @mitk 
 
 hard deps
-[ ] ITK @mitk 
-[*] VTK @vcpkg 
-[*] boost, @vcpkg 
-[ ] [[SimpleITK]] @mitk 
-[ ] ACVD @mitk 
-[ ] CTK, @mitk 
-[ ] rasqal @mitk 
-[ ] redland @mitk 
-[ ] dcmqi @mitk 
-[ ] [[MatchPoint]] @mitk 
-[*] qwt @vcpkg 
+* ITK @mitk
+* VTK @vcpkg 
+* boost, @vcpkg 
+* [[SimpleITK]] @mitk 
+* ACVD @mitk 
+* CTK, @mitk 
+* rasqal @mitk 
+* redland @mitk 
+* dcmqi @mitk 
+* [[MatchPoint]] @mitk 
+* qwt @vcpkg 
 
-{{./screenshot_2018-08-19-203744.png}}
-
-
-
-[*] [[BlueBerryDocTools]]
-[*] Breakpad
-[*] [[CabelSwig]]
-[*] [[InsightToolkit]]
-[*] MITK-Data
-[*] [[PythonQt]]
-[*] SOFA
-[*] ann-cmake
-[*] ann
-[*] doxygen
-[*] freeglut
-[*] glew
-[*] glew-cmake
-[*] libqxt
-[*] matlab-cli
-[*] patch.exe
-[*] python-cmake-buildsystem
-[*] qRestAPI
-[*] vtkVmtk
+* [[BlueBerryDocTools]]
+* Breakpad
+* [[CabelSwig]] 
+* [[InsightToolkit]]
+* MITK-Data
+* [[PythonQt]]
+* SOFA
+* ann-cmake
+* ann
+* doxygen
+* freeglut
+* glew
+* glew-cmake
+* libqxt
+* matlab-cli
+* patch.exe
+* python-cmake-buildsystem
+* qRestAPI
+* vtkVmtk
 
 _ctk_set_python_extension_symbol_visibility
 macro(ctkMacroBuildLibWrapper)

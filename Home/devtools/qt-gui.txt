@@ -5,10 +5,15 @@ Creation-Date: 2018-08-17T16:54:40+08:00
 ====== qt-gui ======
 Created 星期五 17 八月 2018
 
+
 ====== People ======
 * Skycoder42 专注Qt界面，QML和Widget
 https://github.com/Skycoder42
 此人近两年非常活跃，做客户端软件，先参考此人作品
+* https://github.com/benlau
+quickflux, Android
+* https://github.com/Cutehacks
+qpm, duperagent, pdfium-qmake, 
 
 ====== Package ======
 qpm 
@@ -17,6 +22,14 @@ qpmx https://github.com/Skycoder42/qpmx
 ===== QIF =====
 QtIFW-Advanced-Setup 在工程文件中制作安装包
 https://github.com/Skycoder42/QtIFW-Advanced-Setup
+http://doc.qt.io/qtinstallerframework/
+https://download.qt.io/official_releases/qt-installer-framework/
+
+[ ] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup
+
+===== linuxdeployqt =====
+https://github.com/probonopd/linuxdeployqt
+[ ] 尝试：Linux下qt安装包制作
 
 ====== AppFrm ======
 
@@ -28,19 +41,49 @@ The CoreApp is what's reponsible for managing those viewmodels. Showing a viewmo
 The views are whatever you need to create actual uis. This depends on the presenter used, since the presenter selects the views. Each ui type has their own way to create those views, but they all have in commmon that the views themselves do not control the application. When a viewmodel gets shown, a new view is created and the viewmodel passed to it. Once the views was closed, the view and the viewmodel get deleted again. Views and ViewModels are temporary and should only use the viewmodel to interact with other parts of the application.
 https://skycoder42.github.io/QtMvvm/
 
+===== quickflux =====
+https://github.com/benlau/quickflux
+
+====== Ui ======
+
+===== Style & Material =====
+* tried
+【重点】https://github.com/lirios/fluid 
+
+* reference
+https://github.com/martinrotter/qt-material-stylesheet
+https://github.com/Jorgen-VikingGod/Qt-Frameless-Window-DarkStyle
+https://github.com/ColinDuquesnoy/QDarkStyleSheet
+https://github.com/laserpants/qt-material-widgets
+https://github.com/martinrotter/qt-material-stylesheet
+https://github.com/papyros/qml-material
+https://github.com/papyros/material-qt-decorations
+
+
 ====== Settings ======
 [[QSettingsGenerator]] 给应用生成一个xml的配置，并转化为代码
 https://github.com/Skycoder42/QSettingsGenerator
 
 ====== DebugTool ======
 
+
+===== qml-explore =====
+https://github.com/Siecje/qml-explorer
+输入js表达式，在当前页面中运行，并查看结果，这个功能有点像嵌入的命令行工具
+
 ===== Qt-Inspector =====
+https://github.com/robertknight/Qt-Inspector
+从进程外观测QT进程中的对像树
+
+===== Qt调试技术 =====
+（1）在日志中打印QT的版本信息，qconfig.h中定义了QT_VERSION_STR
+
 
 ====== PropertyEditor ======
 最终用户界面用的属性编辑功能，和开发用的属性编辑功能可以不同，
 	开发时简单有效，参数多
 	最终应用中属性少，简单要美观
-	
+
 
 ===== QtPropertyBrowser =====
 https://github.com/abhijitkundu/QtPropertyBrowser
@@ -78,16 +121,33 @@ The goal of Grantlee Templates is to make it easier for application developers t
 Part of the design of both template systems is that application developers can extend the syntax by implementing their own tags and filters. For details of how to do that, see the API documentation.
 https://github.com/steveire/grantlee.git
 
+====== MVC ======
+
+===== model =====
+[[JsonListModel]] https://github.com/Cutehacks/gel
+
 ====== Game ======
 [[+Game]]
 
 ====== Graph ======
 [[+picker]]
 
+====== Util ======
+
+===== file util =====
+* manipulate file like shell
+https://github.com/benlau/qtshell
+[ ] 有益: 变成QML的插件
 
 
 ====== Resource ======
 
 ===== icon =====
 http://www.fatcow.com/free-icons
+	Widgets: http://www.fatcow.com/free-icons
+	Quick: https://material.io/icons/
+
+
+===== Font =====
+awesome
 
