@@ -30,3 +30,5 @@ QmitkAboutDialog::QmitkAboutDialog(QWidget *parent, Qt::WindowFlags f) : QDialog
   connect(m_GUI.m_ButtonBox, SIGNAL(rejected()), this, SLOT(reject()));
 }
 }}}
+
+
