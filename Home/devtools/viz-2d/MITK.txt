@@ -23,6 +23,7 @@ BOOST_ROOT = E:\ws.local\boost_1_68_0_b1_rc2
 [ ] MITK代码分析
 	[ ] 通过QmitkAboutDialog查找主界面
 	[ ] 分析主界面的逻辑
+	[ ] 没有看到在mitk中写python算法的例子
 
 ====== 3rd Party libs ======
 

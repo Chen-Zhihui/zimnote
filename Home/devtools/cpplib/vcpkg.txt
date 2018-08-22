@@ -1,9 +1,10 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
-Creation-Date: 2018-08-20T10:12:31+08:00
+Creation-Date: 2018-08-22T09:13:17+08:00
 
-====== cpplibs ======
-Created 星期一 20 八月 2018
+====== vcpkg ======
+Created 星期三 22 八月 2018
+
 
 [ ] cpplib pocoosp在vcpkg中编辑安装不正确 <2018-08-24
 {{{code: lang="sh" linenumbers="True"
@@ -31,12 +32,4 @@ submit an issue at https://github.com/Microsoft/vcpkg/issues including:
 
 Additionally, attach any relevant sections from the log files above.
 }}}
-
-
-
-* cryptopp https://www.cryptopp.com/
-Crypto++ Library is a free C++ class library of cryptographic schemes
-https://github.com/Skycoder42/CryptoQQ wrapper for Qt
-
-
 

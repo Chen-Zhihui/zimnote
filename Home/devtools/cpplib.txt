@@ -5,6 +5,12 @@ Creation-Date: 2018-08-20T17:32:09+08:00
 ====== cpplib ======
 Created 星期一 20 八月 2018
 
+====== packages ======
+
+===== vcpkg =====
+[[+vcpkg]]
+
+
 ====== io, serialization, json, xml ======
 
 ===== json =====
@@ -20,3 +26,8 @@ https://github.com/USCiLab/cereal
 ===== Catch =====
 https://github.com/catchorg/Catch2
 [ ] example for catch2 <2018-08-22
+
+====== Crypto ======
+* cryptopp https://www.cryptopp.com/
+Crypto++ Library is a free C++ class library of cryptographic schemes
+https://github.com/Skycoder42/CryptoQQ wrapper for Qt
