@@ -1,0 +1,304 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-22T11:38:23+08:00
+
+====== Poco ======
+Created 星期三 22 八月 2018
+
+====== Doc ======
+[[.\000-IntroAndOverview.pdf]] 
+[[.\010-Types.pdf]] 
+[[.\020-ErrorHandlingAndDebugging.pdf]] 
+[[.\030-MemoryManagement.pdf]] 
+[[.\040-StringsAndFormatting.pdf]] 
+[[.\050-PlatformAndEnvironment.pdf]] 
+[[.\060-RandomCrypto.pdf]] 
+[[.\070-DateAndTime.pdf]] 
+[[.\080-Files.pdf]] 
+[[.\090-NotificationsEvents.pdf]] 
+[[.\100-Streams.pdf]] 
+[[.\110-Logging.pdf]] 
+[[.\120-SharedLibraries.pdf]] 
+[[.\130-Threads.pdf]] 
+[[.\140-Cache.pdf]] 
+[[.\145-Hashing.pdf]] 
+[[.\150-Processes.pdf]] 
+[[.\160-URIandUUID.pdf]] 
+[[.\170-XML.pdf]] 
+[[.\180-Configuration.pdf]] 
+[[.\185-LoggingConfiguration.pdf]] 
+[[.\190-Applications.pdf]] 
+[[.\200-Network.pdf]] 
+
+====== Packages ======
+	Crypto
+		Certificate
+		Cipher
+		Crypto
+		CryptoCore
+		Digest
+		EC
+		ECDSA
+		RSA
+	Data
+		DataCore
+		Logging
+		SessionPooling
+	Data/MySQL
+		MySQL
+	Data/ODBC
+		ODBC
+	Data/SQLite
+		SQLite
+	Encodings
+		Encodings
+	Foundation
+		Cache
+		Core
+		Crypt
+		DateTime
+		Dynamic
+		Events
+		Filesystem
+		Hashing
+		Logging
+		Notifications
+		Processes
+		RegExp
+		SharedLibrary
+		Streams
+		Tasks
+		Text
+		Threading
+		URI
+		UUID
+	JSON
+		JSON
+	MongoDB
+		MongoDB
+	Net
+		FTP
+		HTML
+		HTTP
+		HTTPClient
+		HTTPServer
+		ICMP
+		Logging
+		Mail
+		Messages
+		NTP
+		NetCore
+		OAuth
+		Reactor
+		Sockets
+		TCPServer
+		WebSocket
+	NetSSL_OpenSSL
+		HTTPSClient
+		Mail
+		SSLCore
+		SSLSockets
+	Redis
+		Redis
+	Util
+		Application
+		Configuration
+		Options
+		Timer
+		Units
+		Util
+		Windows
+	XML
+		DOM
+		SAX
+		XML
+	Zip
+		Manipulation
+		Zip
+
+
+====== Foundation ======
+
+		Platform abstraction – Eases porting issues of fundamental types, etc.
+		Memory management – Resource Acquisition Is Initialization (RAII), auto_ptr, reference counting garbage collection, etc.
+		String utilities
+		Error handling – Extended exception classes
+		streams – Encoding and decoding and filtering support
+		threads – Concurrent processing support
+		Date and time – Date and time support including formatting and high precision timers
+		File system – Abstracted file system support
+		Logging – Application and system logging, filtering and logging strategies
+		Processes – Interprocess communication and memory sharing
+		shared libraries – Dynamic library support
+		Notifications – Abstracted notification support
+		Events – Abstracted event support and strategies
+		Crypt – Random number generation, Digests and encoding/decoding engines
+		Text – Unicode encoding support
+		Regular expressions – Based on Perl compatible regular expression
+		URI – Universal Resource Identifier support
+		UUID – Universally Unique Identifiers support and generators
+		Cache support – Abstracted strategy support
+		
+
+===== Logging =====
+ArchiveByNumberStrategy, ArchiveByTimestampStrategy, ArchiveStrategy, PurgeByAgeStrategy, PurgeByCountStrategy, PurgeStrategy, RotateAtTimeStrategy, RotateByIntervalStrategy, RotateBySizeStrategy, RotateStrategy, 
+
+AsyncChannel, Channel, ColorConsoleChannel, Configurable, ConsoleChannel, EventChannel, EventLogChannel, FileChannel, SimpleFileChannel, SplitterChannel, StreamChannel, SyslogChannel, WindowsColorConsoleChannel, WindowsConsoleChannel, FormattingChannel, NullChannel, 
+LogFile, LogIOS, LogStream, LogStreamBuf, 
+Logger, LoggingFactory, LoggingRegistry, 
+Message, 
+PatternFormatter, 
+Formatter, 
+
+==== rotate file channel ====
+{{{code: lang="cpp" linenumbers="True"
+	AutoPtr<SplitterChannel> splitterChannel(new SplitterChannel());
+
+	AutoPtr<Channel> consoleChannel(new ConsoleChannel());
+	AutoPtr<Channel> fileChannel(new FileChannel("test.log"));
+	AutoPtr<FileChannel> rotatedFileChannel(new FileChannel("rotated.log"));
+
+	rotatedFileChannel->setProperty("rotation", "100");
+	rotatedFileChannel->setProperty("archive", "timestamp");
+
+	splitterChannel->addChannel(consoleChannel);
+	splitterChannel->addChannel(fileChannel);
+	splitterChannel->addChannel(rotatedFileChannel);
+
+
+	AutoPtr<Formatter> formatter(new PatternFormatter("%h-%M-%S.%i: %t"));
+	AutoPtr<Channel> formattingChannel(new FormattingChannel(formatter, splitterChannel));
+
+	Logger& logger = Logger::create("TestLog", formattingChannel, Message::PRIO_TRACE);
+
+	for (int i = 0; i < 10; ++i)
+	{
+		std::ostringstream oss;
+		oss << "Value of i: " << i;
+		logger.fatal(oss.str());
+	}
+}}}
+
+	AutoPtr<FileChannel> rotatedFileChannel(new FileChannel("rotated.log"));
+	rotatedFileChannel->setProperty("rotation", "100");
+	rotatedFileChannel->setProperty("archive", "timestamp");
+
+
+====== Net ======
+		sockets – Abstracted low level network support
+		Reactor pattern – Popular network abstraction pattern support
+		MIME messages – Encoding support
+		HTTP – High level HTTP support for client and servers
+		FTP – High level FTP support
+		Mail – POP3, SMTP stream based support
+		HTML – Form support
+
+
+====== XML ======
+		SAX2
+		Document Object Model (DOM)
+		XML writer
+
+
+====== JSON ======
+		APIs for reading and writing JSON
+
+
+====== Util ======
+
+===== Configuration files =====
+AbstractConfiguration
+ConfigurationMapper : 统一改变配置信息的前缀，可变，可增，可减
+ConfigurationView ：指定一个前缀，显示一个配置分枝
+LayeredConfiguration
+
+FilesystemConfiguration
+IniFileConfiguration
+JSONConfiguration
+MapConfiguration
+PropertyFileConfiguration
+WinRegistryConfiguration
+XMLConfiguration
+SystemConfiguration
+	/// The following properties are supported:
+	///   - system.osName: the operating system name
+	///   - system.osVersion: the operating system version
+	///   - system.osArchitecture: the operating system architecture
+	///   - system.nodeName: the node (or host) name
+	///   - system.nodeId: system ID, based on the Ethernet address (format "xxxxxxxxxxxx") 
+	///     of the first Ethernet adapter found on the system.
+	///   - system.currentDir: the current working directory
+	///   - system.homeDir: the user's home directory
+	///   - system.configHomeDir: the base directory relative to which user specific configuration files should be stored
+	///   - system.cacheHomeDir: the base directory relative to which user specific non-essential data files should be stored
+	///   - system.dataHomeDir: the base directory relative to which user specific data files should be stored
+	///   - system.tempHomeDir: the base directory relative to which user-specific temporary files and other file objects should be placed
+	///   - system.tempDir: the system's temporary directory
+	///   - system.configDir: the system's configuration directory
+	///   - system.dateTime: the current UTC date and time, formatted in ISO 8601 format.
+	///   - system.pid: the current process ID.
+	///   - system.env.<NAME>: the environment variable with the given <NAME>.
+
+
+===== Command line options =====
+
+AbstractOptionCallback, AmbiguousOptionException, DuplicateOptionException, EmptyOptionException, HelpFormatter, IncompatibleOptionsException, IntValidator, InvalidArgumentException, MissingArgumentException, MissingOptionException, Option, OptionCallback, OptionException, OptionProcessor, OptionSet, RegExpValidator, UnexpectedArgumentException, UnknownOptionException, Validator
+
+* Application::setUnixOptions(true) 
+Command line arguments are usually specified in the format typical for the platform:
+> /option or /option=value on Windows
+**> -o, -ovalue, --option or --option:value on Unix**
+
+===== Tools and server application framework =====
+
+
+===== Poco::Util::Application =====
+
+配置：
+[ ] 在处理命令行参数之前，打印当前配置信息
+[ ] 定义默认配置参数，json
+[ ] 把默认配置参数集中到全局配置信息中
+[ ] 打印全局配置信息
+[ ] 如果指定config参数，则从该路径中加载配置
+[ ] 找到的其他配置参数，全部放在配置中记录下来，和前一项有可能会产生覆盖情况，以后者为准
+[ ] 在main函数的入口打印全部配置信息
+
+==== init ====
+Application->setup
+Application(argc, argv)->setup(), init(argc, argv) 这个不用
+setup()->{configure, logger, loggingSubsystem}
+init(argc, argv)->setArgs, init() 如果不事先传入argc, argv，构造好应用程序对象后，要调用该函数
+init()->processOptions()->defineOptions()定义可识别的命令行参数；
+
+如果不显示的调用loadConfiguration，框架中不会调用该函数
+
+==== run ====
+initialize() 初始化其他子系统
+main()
+
+==== configure ====
+默认配置：
+LayeredConfiguration _pConfig
+		_pConfig->add(new SystemConfiguration, PRIO_SYSTEM, false, false);
+		_pConfig->add(new MapConfiguration, PRIO_APPLICATION, true, false);  这是可写的
+
+默认参数，写入MapConfiguration中
+	_pConfig->setString("application.path", appPath.toString());
+	_pConfig->setString("application.name", appPath.getFileName());
+	_pConfig->setString("application.baseName", appPath.getBaseName());
+	_pConfig->setString("application.dir", appPath.parent().toString());
+	_pConfig->setString("application.configDir", Path::configHome() + appPath.getBaseName() + Path::separator());
+	_pConfig->setString("application.cacheDir", Path::cacheHome() + appPath.getBaseName() + Path::separator());
+	_pConfig->setString("application.tempDir", Path::tempHome() + appPath.getBaseName() + Path::separator());
+	_pConfig->setString("application.dataDir", Path::dataHome() + appPath.getBaseName() + Path::separator());
+
+void Application::loadConfiguration(const std::string& path, int priority) 从指定的目录找配置文件
+   init, json, properties, xml, 
+int Application::loadConfiguration(int priority) 从应用的安装目录找配置文件
+
+加载配置时，会根据当前加载的配置文件的路径计算出一个配置文件夹， 这样其他模块就可以根据这个路径找到自已相应的配置文件了
+_pConfig->setString("application.configDir", confPath.parent().toString())
+
+==== logger ====
+	AutoPtr<ConsoleChannel> pCC = new ConsoleChannel;
+	Logger::setChannel("", pCC);

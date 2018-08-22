@@ -10,22 +10,29 @@ Created 星期一 20 八月 2018
 ===== vcpkg =====
 [[+vcpkg]]
 
+====== Framework ======
+[[+Poco]]
+
 
 ====== io, serialization, json, xml ======
 
 ===== json =====
 https://github.com/nlohmann/json
-[ ] example for json <2018-08-22
+[[+json]] 
+[*] example for json <2018-08-22
 
 ===== cereal =====
 https://github.com/USCiLab/cereal
-[ ] example for cereal <2018-08-22
+[x] example for cereal <2018-08-22 json具有序列化的功能，可以完成UDT和字符串的转换，所以这个库也就不必要了
+
+===== fmt =====
+[ ] 格式化输入输出 <2018-08-22 对比Poco中的format
 
 ====== test ======
 
 ===== Catch =====
 https://github.com/catchorg/Catch2
-[ ] example for catch2 <2018-08-22
+[*] example for catch2 <2018-08-22
 
 ====== Crypto ======
 * cryptopp https://www.cryptopp.com/
