@@ -61,7 +61,7 @@ https://github.com/papyros/material-qt-decorations
 
 
 ====== Settings ======
-[[QSettingsGenerator]] 给应用生成一个xml的配置，并转化为代码
+QSettingsGenerator 给应用生成一个xml的配置，并转化为代码
 https://github.com/Skycoder42/QSettingsGenerator
 
 ====== DebugTool ======
@@ -124,7 +124,7 @@ https://github.com/steveire/grantlee.git
 ====== MVC ======
 
 ===== model =====
-[[JsonListModel]] https://github.com/Cutehacks/gel
+JsonListModel https://github.com/Cutehacks/gel
 
 ====== Game ======
 [[+Game]]

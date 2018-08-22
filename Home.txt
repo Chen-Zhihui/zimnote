@@ -20,23 +20,33 @@ Created 星期四 16 八月 2018
 [[+devtools]] 
 	[[+devtools:cpplib]] 非特定, 凡是用过的都建一个新页面，否则仅有一个链接
 	[[+devtools:office]] 
-	[[+devtools:qt-gui]]
+	[[+devtools:qt-gui]] 非特定，界面相关开发库
 	[[+devtools:software]] 需要备份的软件列表
-	[[+devtools:viz-2d]]
+	[[+devtools:viz-2d]] 非特定
+	[[+devtools:viz-2d:MITK]]  积累
 	
 
+====== 刻意练习主题 ======
+
+[[+projects:card]] 每天早晚
+[[+projects:cv]] 刻意练习opencv
+[[+projects:ebox]] 工作
+[[+devtools:viz-2d:MITK]]  积累
+
+====== 非特定主题 ======
+
+[[+projects:home_chores]] 非特定
+[[+projects:machine learning]] 非特定
+[[+projects:mind]] 非特定
+[[+projects:opt]] 非特定
+[[+devtools:cpplib]] 非特定, 凡是用过的都建一个新页面，否则仅有一个链接
+[[+devtools:qt-gui]] 非特定，界面相关开发库
 
 ====== 编程技术积累 ======
 [[+devtools]] 
 	[[+devtools:office:zim]]
 	[[+devtools:office:zotero]]
 	[[+devtools:viz-2d]]
-
-
-====== 重要主题列表快速索引 ======
-[[projects:card]] 每天早晚
-[[:Home:devtools:viz-2d:MITK]] 积累
-
 
 
 ====== GTD ======

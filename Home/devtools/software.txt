@@ -48,9 +48,9 @@ doxygen
 ====== mm ======
 	ffmpeg
 	shotcut
-	[[QtAV]]
+	QtAV
 	Blackmagic
 	Adobe
-	[[OpenShot]]
+	OpenShot
 	MC
 

@@ -30,7 +30,7 @@ BOOST_ROOT = E:\ws.local\boost_1_68_0_b1_rc2
 
 * poco @vcpkg 
 * dcmtk, @mitk 
-* [[OpenIGTLink]] @mitk 
+* OpenIGTLink @mitk 
 * tinyxml, 2.6.2, @vcpkg 
 * gdcm, @vcpkg 
 * GLUT @mitk 
@@ -41,32 +41,32 @@ BOOST_ROOT = E:\ws.local\boost_1_68_0_b1_rc2
 * pcre @vcpkg 
 * zlib @vcpkg 
 * hdf5 @vcpkg 
-* [[BetData]] @mitk 
+* BetData @mitk 
 * swig @mitk 
 * Python
 * numpy
-* [[OpenCV]]
+* OpenCV
 * vigra @mitk 
 
 hard deps
 * ITK @mitk
 * VTK @vcpkg 
 * boost, @vcpkg 
-* [[SimpleITK]] @mitk 
+* SimpleITK @mitk 
 * ACVD @mitk 
 * CTK, @mitk 
 * rasqal @mitk 
 * redland @mitk 
 * dcmqi @mitk 
-* [[MatchPoint]] @mitk 
+* MatchPoint @mitk 
 * qwt @vcpkg 
 
-* [[BlueBerryDocTools]]
+* BlueBerryDocTools
 * Breakpad
-* [[CabelSwig]] 
-* [[InsightToolkit]]
+* CabelSwig 
+* InsightToolkit
 * MITK-Data
-* [[PythonQt]]
+* PythonQt
 * SOFA
 * ann-cmake
 * ann
