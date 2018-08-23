@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-23T09:16:38+08:00
+
+====== 星期四 23 8月 2018 ======
+
+[*] 证明：上三角阵的逆矩阵也是上三角阵，用归纳法证，或用计算方法证。所有的矩阵都相似于一个上三角阵，而上三角阵表示对坐标的加加减减
+[*] 写代码：cv算法的参数传递，本周末要出算法模块，应用框架，基本识别程序，安装脚本
+[*] 向调试界面传送cwd变量失败，这是VS的Bug {
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+	{
+	  "type": "cppdbg",
+	  "name": "helloworld.exe",
+	  "project": "bin\\helloworld.exe",
+	  **"cwd": "${workspaceRoot}",**
+	  "program": "${debugInfo.target}",
+	  "MIMode": "gdb",
+	  "miDebuggerPath": "${env.MINGW_PREFIX}\\bin\\gdb.exe",
+	  "externalConsole": true
+	}
+  ]
+}
+应改为
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+	{
+	  "type": "default",
+	  "project": "CMakeLists.txt",
+	  "projectTarget": "path\\to\\target",
+	  "name": "My Awesome Project",
+	  **"currentDir": "${workspaceRoot}/src"**
+	}
+  ]
+}
+
+https://stackoverflow.com/questions/41864259/how-to-set-working-directory-for-visual-studio-2017-rc-cmake-project
+
+[*] Poco::Util::JsonConfigure 可能是有问题的，【确认】只是打印输出的问题，实际数据无误
+	[*] 不能正常初始化三级对象，这样的话，就不能把全部配置放在与配置文件一级，需要另做一个
+	[*] 但这样的话就不能充分利用Poco中的多级配置的优势
+	[*] Jsonconfiguration, 只能处理简单对象，把复杂对象和数组都处理成字符串了
+	[*] 只是输出的形式不对，结果是对的，出错可能在JsonConfiguration::getRaw()函数中，与其他配置类型的处理不吻合
+	[*] 这个问题先放过去
+[ ] 模仿Poco写安装脚本，windows上编译通过

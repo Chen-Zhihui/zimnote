@@ -17,13 +17,17 @@ Created 星期四 16 八月 2018
 	[[+projects:machine learning]] 非特定
 	[[+projects:mind]] 非特定
 	[[+projects:opt]] 非特定
+	[[+projects:matrix]] 非特定
 [[+devtools]] 
 	[[+devtools:cpplib]] 非特定, 凡是用过的都建一个新页面，否则仅有一个链接
 	[[+devtools:office]] 
 	[[+devtools:qt-gui]] 非特定，界面相关开发库
 	[[+devtools:software]] 需要备份的软件列表
 	[[+devtools:viz-2d]] 非特定
-	[[+devtools:viz-2d:MITK]]  积累
+	[[+devtools:viz-2d:MITK]]  积累, 
+		* GraphMIC是一个有价值的方向，GraphMIC引入的python算法，引入了图形式的编程，适合于教学
+		* 也可做为发布新产品的平台
+      
 	
 
 ====== 刻意练习主题 ======
@@ -41,6 +45,7 @@ Created 星期四 16 八月 2018
 [[+projects:opt]] 非特定
 [[+devtools:cpplib]] 非特定, 凡是用过的都建一个新页面，否则仅有一个链接
 [[+devtools:qt-gui]] 非特定，界面相关开发库
+[[+projects:writing]] 
 
 ====== 编程技术积累 ======
 [[+devtools]] 

@@ -25,7 +25,7 @@ https://github.com/Skycoder42/QtIFW-Advanced-Setup
 http://doc.qt.io/qtinstallerframework/
 https://download.qt.io/official_releases/qt-installer-framework/
 
-[ ] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup
+[ ] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup <2018-08-27
 
 ===== linuxdeployqt =====
 https://github.com/probonopd/linuxdeployqt

@@ -1,0 +1,127 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-23T10:50:33+08:00
+
+====== CMakeSettings.json ======
+Created 星期四 23 八月 2018
+
+{{{code: lang="js" linenumbers="True"
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "BuildDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build",
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "name": "x86-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x86 compiler.
+      "inheritEnvironments": [ "msvc_x86" ],
+      "buildRoot": "${env.BuildDir}\\${name}"
+    },
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x64 compiler.
+      "inheritEnvironments": [ "msvc_x64" ],
+      "buildRoot": "${env.BuildDir}\\${name}"
+    }
+  ]
+}
+}}}
+
+
+{{{code: lang="js" linenumbers="True"
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "BuildDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}",
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "name": "x86-Debug",
+ 
+      // The syntax for this property is the same as the global one above.
+      "environments": [
+        {
+          // Replace the global property entirely.
+          "BuildDir": "D:\\custom-builddir",
+        }
+      ],
+ 
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x86 compiler.
+      "inheritEnvironments": [ "msvc_x86" ],
+      // This will evaluate to "D:\custom-builddir\x86-Debug" due to the
+      // configuration-specific override.
+      "buildRoot": "${env.BuildDir}\\${name}"
+    },
+    {
+      "name": "x64-Debug",
+ 
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x64 compiler.
+      "inheritEnvironments": [ "msvc_x64" ],
+ 
+      // Since this configuration doesn’t modify BuildDir, it inherits
+      // from the one defined globally.
+      "buildRoot": "${env.BuildDir}\\${name}"
+    }
+  ]
+}
+}}}
+
+
+自字义命名空间
+{{{code: lang="js" linenumbers="True"
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "BuildDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build",
+    },
+    {
+      // “namespace” is a reserved key that lets you put variables
+      // in namespaces other than $env.
+      "namespace": "special",
+      // SpecialVar will not be added to the environment.
+      "SpecialVar": "special",
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "name": "x86-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x86 compiler.
+      "inheritEnvironments": [ "msvc_x86" ],
+      // You can use alternative namespaces (such as special defined above)
+      // just like "$env."
+      "buildRoot": "${env.BuildDir}\\${special.SpecialVar}\\${name}"
+    },
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      // Inherit the defaults for using the MSVC x64 compiler.
+      "inheritEnvironments": [ "msvc_x64" ],
+      "buildRoot": "${env.BuildDir}\\${name}"
+    }
+  ]
+}
+}}}
+
+

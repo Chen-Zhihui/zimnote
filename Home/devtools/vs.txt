@@ -11,3 +11,7 @@ https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studi
 
 
 [[.\129ConnectCmake.pptx]] 
+
+[[+launch.vs.json]]
+[[+CMakeSettings.json]]
+

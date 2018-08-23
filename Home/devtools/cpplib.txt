@@ -10,6 +10,10 @@ Created 星期一 20 八月 2018
 ===== vcpkg =====
 [[+vcpkg]]
 
+===== cmake =====
+[[+cmake]]
+
+
 ====== Framework ======
 [[+Poco]]
 
@@ -27,6 +31,12 @@ https://github.com/USCiLab/cereal
 
 ===== fmt =====
 [ ] 格式化输入输出 <2018-08-22 对比Poco中的format
+
+====== functional ======
+
+===== expected =====
+https://github.com/TartanLlama/expected
+[*] import, add unit test
 
 ====== test ======
 
