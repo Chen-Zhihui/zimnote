@@ -30,7 +30,7 @@ https://github.com/USCiLab/cereal
 [x] example for cereal <2018-08-22 json具有序列化的功能，可以完成UDT和字符串的转换，所以这个库也就不必要了
 
 ===== fmt =====
-[ ] 格式化输入输出 <2018-08-22 对比Poco中的format
+[*] 格式化输入输出 <2018-08-22 对比Poco中的format
 
 ====== functional ======
 

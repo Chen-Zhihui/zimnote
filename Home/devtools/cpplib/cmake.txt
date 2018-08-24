@@ -7,6 +7,12 @@ Created 星期四 23 八月 2018
 
 ===== add_library =====
 
+target_compile_definitions
+target_compile_features
+target_compile_options
+target_include_directoires
+target_link_libraries
+target_sources
 
 ===== export install =====
 
@@ -19,6 +25,7 @@ install(
 	COMPONENT Devel
 	PATTERN ".svn" EXCLUDE
 	)
+
 
 ==== 编译成果 ====
 install(
