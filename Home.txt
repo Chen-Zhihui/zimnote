@@ -3,6 +3,7 @@ Wiki-Format: zim 0.4
 Creation-Date: 2018-08-16T18:13:03+08:00
 
 ====== Home ======
+
 Created 星期四 16 八月 2018
 
 [[+playgrond]]
@@ -25,8 +26,8 @@ Created 星期四 16 八月 2018
 	[[+devtools:software]] 需要备份的软件列表
 	[[+devtools:viz-2d]] 非特定
 	[[+devtools:viz-2d:MITK]]  积累, 
-		* GraphMIC是一个有价值的方向，GraphMIC引入的python算法，引入了图形式的编程，适合于教学
-		* 也可做为发布新产品的平台
+	* GraphMIC是一个有价值的方向，GraphMIC引入的python算法，引入了图形式的编程，适合于教学
+	* 也可做为发布新产品的平台
       
 	
 
