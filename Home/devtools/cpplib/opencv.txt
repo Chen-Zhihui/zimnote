@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-22T09:31:26+08:00
+
+====== opencv ======
+Created 星期三 22 八月 2018
+
+opencv github  https://github.com/opencv
+opencv extra    https://github.com/opencv/opencv_extra
+opencv 3rd      https://github.com/opencv/opencv_3rdparty
+opencv_contrib https://github.com/opencv/opencv_contrib
+
+
+[[+Build]]
+
+[[+Qt]]
+https://github.com/karlphillip/GraphicsProgramming
+
+
+[[+timing]]
+[[+LUT]]
+
+与人脸相关的模块
+[[+facemark]] 
+* face alignment https://github.com/opencv/opencv_contrib/pull/1199
+* https://sukhad007.wordpress.com/
+
+
+cvat https://github.com/opencv/cvat
+annotation tool for opencv
+

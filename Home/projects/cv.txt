@@ -32,7 +32,8 @@ Created 星期四 16 八月 2018
 	* Opencv, 做环境
 	* 整理一些算法思路，分给王晓东做一部分
 
-[[+opencv_api]] 
+OpenCV
+[[devtools:cpplib:opencv]]
 
 
 [[+annotation-tool]]

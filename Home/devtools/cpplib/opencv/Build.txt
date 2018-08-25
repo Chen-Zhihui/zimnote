@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-25T11:02:59+08:00
+
+====== Build ======
+Created 星期六 25 八月 2018
+
+[ ] todo: tidy this page while build opencv and contrib <2018-08-25
+	[ ] 参考 https://www.learnopencv.com/install-opencv3-on-windows/
+	[ ] 下载代码包，不要下载git
+	[ ] 编译额外模块的方法 https://github.com/opencv/opencv_contrib
+
+Building OpenCV_contrib for OpenCV 3, Windows GUI
+
+	opencv_contrib
+	#cmake-gui
+	#Opencv3.0
+
+I built successfully the main branch of OpenCV 3 from Github. Now, I want to build the OpenCV_contrib portion of it, especially the xfeature2d (actually, it is the only thing that matters for me). There are instructions on how to do so in the readme section of the Github page.
+
+I am using CMake 3.0.2 GUI on Windows 7. So far, I haven't found a command line version so I am using the GUI.
+
+The steps I am using (from the readme):
+
+	start cmake-gui
+
+	select the opencv source code folder and the folder where binaries will be built (the 2 upper forms of the interface)
+
+	press the configure button. you will see all the opencv build parameters in the central interface
+
+	browse the parameters and look for the form called OPENCV_EXTRA_MODULES_PATH (use the search form to focus rapidly on it)
+
+	complete this OPENCV_EXTRA_MODULES_PATH by the proper pathname to the <opencv_contrib>/modules value using its browse button.
+
+	press the configure button followed by the generate button (the first time, you will be asked which makefile style to use)
+
+	build the opencv core with the method you chose
+
+Here is how the folder containing the sources and build looks like: image description
+
+So the Master branch is in the "Sources" folder and the extra module are in the "Contrib" folder.
+
+Following the instructions, the CMake part seems to work well. But, when I try to build it in Visual Studio, various errors about "No such files or directory" in "descriptors.hpp" and "types.hpp" and some problems with undeclared identifiers in the Saliency module.
+
+There could be a lot of reasons for this. A knowledgeable person told me in a comment that I should launch CMake from the same build folder than for the main repo, but I don't see how with the GUI...

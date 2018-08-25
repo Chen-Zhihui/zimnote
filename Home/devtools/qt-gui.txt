@@ -59,6 +59,12 @@ https://github.com/martinrotter/qt-material-stylesheet
 https://github.com/papyros/qml-material
 https://github.com/papyros/material-qt-decorations
 
+====== Graph ======
+
+===== GraphView based =====
+* nodeeditor https://github.com/paceholder/nodeeditor
+* chigraph https://github.com/chigraph/chigraph
+
 
 ====== Settings ======
 QSettingsGenerator 给应用生成一个xml的配置，并转化为代码

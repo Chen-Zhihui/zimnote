@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-25T10:43:24+08:00
+
+====== Facemark ======
+Created 星期六 25 八月 2018
+
+介绍
+https://www.learnopencv.com/facemark-facial-landmark-detection-using-opencv/
+
+Facemark API for OpenCV
+https://github.com/kurnianggoro/GSOC2017
+
+Student: Laksono kurnianggoro
+Mentor: Delia Passalacqua
+Link to commits: https://github.com/opencv/opencv_contrib/pull/1257/commits
+Link to codes: https://github.com/opencv/opencv_contrib/pull/1257/files
+Introduction
+
+Facial landmark detection is a useful algorithm with many possible applications including expression transfer, virtual make-up, facial puppetry, faces swap, and many mores. This project aims to implement a scalable API for facial landmark detector. Furthermore, it will also implement 2 kinds of algorithms, including active appearance model (AAM) [1] and regressed local binary features (LBF) [2].
+
+References
+[1] G. Tzimiropoulos and M. Pantic, "Optimization problems for fast AAM fitting in-the-wild," ICCV 2013.
+[2] S. Ren, et al. , “Face alignment at 3000 fps via regressing local binary features”, CVPR 2014.
+
