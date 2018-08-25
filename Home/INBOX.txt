@@ -26,3 +26,11 @@ https://github.com/OpenBCI
 
 ML
 [[+Knowledge_Graph]]
+
+====== Note ======
+
+===== Kiwix =====
+http://www.openzim.org/wiki/OpenZIM
+https://github.com/kiwix
+https://github.com/kiwix/kiwix-desktop
+https://github.com/kiwix/kiwix-lib
