@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-26T22:48:44+08:00
+
+====== ml app ======
+Created 星期日 26 八月 2018
+
+====== NPL ======
+
+===== kiwix的桌面应用 =====
+[ ] 在Linux上编译这个应用kiwix，这个可以做为自然语言处理和知识图谱的开端，以这个库带的文本处理和索引为基础，入手自然语言处理

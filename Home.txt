@@ -15,7 +15,8 @@ Created 星期四 16 八月 2018
 	[[+projects:ebox]] 工作
 	[[+projects:face]]  积累
 	[[+projects:home_chores]] 非特定
-	[[+projects:machine learning]] 非特定
+	[[+projects:ml alg]] 非特定
+	[[+projects:ml_app]] ML的应用场景
 	[[+projects:mind]] 非特定
 	[[+projects:opt]] 非特定
 	[[+projects:matrix]] 非特定
@@ -29,6 +30,14 @@ Created 星期四 16 八月 2018
 	* GraphMIC是一个有价值的方向，GraphMIC引入的python算法，引入了图形式的编程，适合于教学
 	* 也可做为发布新产品的平台
       
+
+====== 路线图 ======
+以Face为入手点，目标
+* 构造一个应用FaceMark
+	* CV 
+	* Caffe2
+	* 一个CV平台，MITK
+	* 其间要把重要的ML算法搞清楚
 	
 
 ====== 刻意练习主题 ======
@@ -41,7 +50,7 @@ Created 星期四 16 八月 2018
 ====== 非特定主题 ======
 
 [[+projects:home_chores]] 非特定
-[[+projects:machine learning]] 非特定
+[[+projects:ml alg]] 非特定
 [[+projects:mind]] 非特定
 [[+projects:opt]] 非特定
 [[+devtools:cpplib]] 非特定, 凡是用过的都建一个新页面，否则仅有一个链接
