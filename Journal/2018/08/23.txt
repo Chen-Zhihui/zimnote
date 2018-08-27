@@ -45,4 +45,4 @@ https://stackoverflow.com/questions/41864259/how-to-set-working-directory-for-vi
 	[*] Jsonconfiguration, 只能处理简单对象，把复杂对象和数组都处理成字符串了
 	[*] 只是输出的形式不对，结果是对的，出错可能在JsonConfiguration::getRaw()函数中，与其他配置类型的处理不吻合
 	[*] 这个问题先放过去
-[ ] 模仿Poco写安装脚本，windows上编译通过
+[*] 模仿Poco写安装脚本，windows上编译通过

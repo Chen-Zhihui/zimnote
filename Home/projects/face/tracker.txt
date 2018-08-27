@@ -12,7 +12,7 @@ https://github.com/mltframework/mlt/blob/master/src/modules/opencv/filter_opencv
 OpenCV中的API
 https://docs.opencv.org/3.1.0/d9/df8/group__tracking.html
 
-[[MultiTracker]] by [[OpenCV]]
+MultiTracker by OpenCV
 https://www.learnopencv.com/multitracker-multiple-object-tracking-using-opencv-c-python/
 
 GOTURN: dl based track
