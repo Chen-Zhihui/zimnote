@@ -48,6 +48,7 @@ Created 星期四 16 八月 2018
 				[ ] 所有结果都直接画在视频中，截图放在一个文件夹中
 				[ ] 输出成json
 			[ ] 命令行工具
+			[ ] https://github.com/kurnianggoro/GSOC2017 FaceMark的参考
 		[ ] 以opencv为开发库，整理有关face的全部算法  
 			[ ] 可能需要自己编译opencv
 		[ ] 算法参数定义成结构体，json序列化

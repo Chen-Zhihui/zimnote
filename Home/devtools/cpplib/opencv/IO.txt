@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-27T15:07:51+08:00
+
+====== IO ======
+Created 星期一 27 八月 2018
+
+read & write a pic file
+file:///E:/ws.local/buildtree/opencv.install/doc/html/d4/da8/group__imgcodecs.html

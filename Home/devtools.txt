@@ -11,4 +11,5 @@ Created 星期五 17 八月 2018
 [[+qt-gui]]
 [[+cpplib]]
 [[+vs]]
+[[+cloud_app]]
 

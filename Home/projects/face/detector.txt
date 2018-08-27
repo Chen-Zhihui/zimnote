@@ -8,9 +8,12 @@ Created 星期五 17 八月 2018
 min_width
 
 
-OpenCV’s HAAR face detector
+===== OpenCV’s HAAR face detector =====
+OpenCV’s HAAR face detector (haarcascade_frontalface_alt2.xml) 
 
-code from OpenFace
+
+===== code from OpenFace =====
+
 {{{code: lang="cpp" linenumbers="True"
     bool DetectFaces(vector<cv::Rect_<float> >& o_regions, const cv::Mat_<uchar>& intensity, float min_width, cv::Rect_<float> roi)
 	{

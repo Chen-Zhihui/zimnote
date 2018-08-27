@@ -12,3 +12,5 @@ Found PythonLibs: C:/Users/tony/Anaconda3/libs/python36.lib (found suitable exac
 没有使用cmake中指定的python版本，所有出现了不一致的问题
 
 已修改在git中，保证可编译
+
+[ ] 整理CTK的fix，推上去  E:\ws.cv\CTK

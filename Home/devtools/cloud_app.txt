@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-27T15:49:05+08:00
+
+====== cloud app ======
+Created 星期一 27 八月 2018
+
+seafile  存储管理软件 https://www.seafile.com/home/ Seafile 是一款开源的企业云盘，注重可靠性和性能。支持 Windows, Mac, Linux, iOS, Android 平台。支持文件同步或者直接挂载到本地访问。

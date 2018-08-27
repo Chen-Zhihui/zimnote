@@ -13,9 +13,12 @@ opencv_contrib https://github.com/opencv/opencv_contrib
 
 [[+Build]]
 
+[[+IO]]
+
+
 [[+Qt]]
 https://github.com/karlphillip/GraphicsProgramming
-
+[ ] 调查QT与opencv的结合方式，看能否直接在QT中用opencv
 
 [[+timing]]
 [[+LUT]]

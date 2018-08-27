@@ -8,3 +8,17 @@ Created 星期五 17 八月 2018
 landmark using opencv
 https://www.learnopencv.com/facemark-facial-landmark-detection-using-opencv/
 https://www.learnopencv.com/facial-landmark-detection/
+
+===== opencv =====
+Next, we load the landmark detector (lbfmodel.yaml) 
+
+
+====== ui output ======
+
+===== opencv =====
+drawLandmarks.hpp 
+
+====== data set ======
+
+annotated landmarks
+https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/

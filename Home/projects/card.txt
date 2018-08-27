@@ -6,6 +6,11 @@ Creation-Date: 2018-08-16T19:41:24+08:00
 
 ====== 习字1500 ======
 
+[ ] 做一个识字软件，可以读卡片，按记忆曲线显示卡片
+[ ] 扫描软件，把识字卡扫描下来，做成记录
+	  https://github.com/ryanpeach/openscan
+	  https://www.learnopencv.com/cv4faces-best-project-award-2018/
+
 
 ====== 习字分组 ======
 
