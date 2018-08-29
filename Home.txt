@@ -11,7 +11,7 @@ Created 星期四 16 八月 2018
 ====== 正在进行的List ======
 [[+projects]] 
 	[[+projects:card]] 每天早晚
-	[[+projects:cv]] 刻意练习opencv
+	[[+projects:CV应用思考框架]] 刻意练习opencv
 	[[+projects:ebox]] 工作
 	[[+projects:face]]  积累
 	[[+projects:home_chores]] 非特定
@@ -29,6 +29,16 @@ Created 星期四 16 八月 2018
 	[[+devtools:viz-2d:MITK]]  积累, 
 	* GraphMIC是一个有价值的方向，GraphMIC引入的python算法，引入了图形式的编程，适合于教学
 	* 也可做为发布新产品的平台
+
+日常
+	[[+projects:daily:memory]]
+	[[+projects:daily:reading]]
+	[[+devtools:cpplib:opencv]] OpenCV的笔记
+	
+	
+	
+
+	
       
 
 ====== 路线图 ======
@@ -43,7 +53,7 @@ Created 星期四 16 八月 2018
 ====== 刻意练习主题 ======
 
 [[+projects:card]] 每天早晚
-[[+projects:cv]] 刻意练习opencv
+[[+projects:CV应用思考框架]] 刻意练习opencv
 [[+projects:ebox]] 工作
 [[+devtools:viz-2d:MITK]]  积累
 

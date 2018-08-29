@@ -17,3 +17,30 @@ https://www.learnopencv.com/multitracker-multiple-object-tracking-using-opencv-c
 
 GOTURN: dl based track
 https://www.learnopencv.com/goturn-deep-learning-based-object-tracking/
+
+
+已有算法：
+* 每次更新一帧，返回结果，可以判断结果，但目前不清楚这些返回值表示什么意义
+
+设计算法
+（1）参考annotation-video
+（2）自己设计
+	* 跟踪器的初始化
+	* 每次读一
+		* 跟踪状态
+			* 有跟踪器在运行
+			* 每个跟踪器跟踪到一个合适的目标
+		* 如果当前处于跟踪状态
+			* 且读数是skip的整数倍，更新追踪器
+			* 画图
+		* 如果不处理跟踪状态
+			* 先检测
+			* 这里有一个问题：根据当前检测到的目标数更新跟踪器，包括数目
+				* 跟踪器数目上限
+				* 检测器与跟踪器的目标吻合的问题：
+					* 如果检测器检测到的目标中心点在跟踪器目标区，则认为相同。
+					* 如果检测器与跟踪器的目标区域中心点足够近
+					* 如果检测器与跟踪器目标区域的交并比足够大
+			* 如果已有跟踪器数目小于再更新追踪器
+		* 显示每帧
+      

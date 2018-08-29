@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-28T16:54:09+08:00
+
+====== reading ======
+Created 星期二 28 八月 2018
+
+[ ] 矩阵论，程云鹏
+[ ] 医用统计学

@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-28T11:10:10+08:00
+
+====== face marks 68 pts ======
+Created 星期二 28 八月 2018
+
+{{.\pasted_image.png}}

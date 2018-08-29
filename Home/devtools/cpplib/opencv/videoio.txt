@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-27T15:07:51+08:00
+
+====== videoio ======
+Created 星期一 27 八月 2018
+
+====== image ======
+read & write a pic file
+file:///E:/ws.local/buildtree/opencv.install/doc/html/d4/da8/group__imgcodecs.html
+{{{code: lang="cpp" linenumbers="True"
+
+#include <opencv2/imgcodecs.hpp>
+
+auto in_img = cv::imread(Poco::Path(in_dir).append(in_file).toString());
+...
+cv::imwrite(out_file.toString(), in_img);
+}}}
+
+
+====== video ======
+
+{{{code: lang="cpp" linenumbers="True"
+#include <opencv2/videoio.hpp>
+
+		cv::VideoCapture cap(in_file_path.toString());
+		if (!cap.isOpened())
+		{
+			auto msg = fmt::format("Error opening video file {}", in_file_path.toString());
+			logger().information(msg);
+			std::cerr << msg << endl;
+			return -1;
+		}
+		cv::Mat frame;
+		cap >> frame;
+
+		cv::VideoWriter writer(out_file_path.toString(), cv::VideoWriter::fourcc('F','M','P','4'), 25, frame.size());
+		if (!writer.isOpened()) {
+			auto msg = fmt::format("Error opening video file {}", out_file_path.toString());
+			logger().information(msg);
+			std::cerr << msg << endl;
+			return -1;
+		}
+
+		while (cap.isOpened())
+		{
+			cap >> frame;
+			frameCount++;
+
+		}
+}}}
+
+
+===== fourcc 编译器编号 =====
+把所有的编码器进行编码
+http://www.fourcc.org/
+http://www.fourcc.org/codecs.php

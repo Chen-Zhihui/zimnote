@@ -9,6 +9,9 @@ landmark using opencv
 https://www.learnopencv.com/facemark-facial-landmark-detection-using-opencv/
 https://www.learnopencv.com/facial-landmark-detection/
 
+using dlib
+https://www.learnopencv.com/facial-landmark-detection/
+
 ===== opencv =====
 Next, we load the landmark detector (lbfmodel.yaml) 
 
@@ -22,3 +25,10 @@ drawLandmarks.hpp
 
 annotated landmarks
 https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/
+[[+face_marks_68_pts]]
+
+
+====== Alg ======
+	FacemarkKazemi: This implementation is based on a paper titled “One Millisecond Face Alignment with an Ensemble of Regression Trees” by V.Kazemi and J. Sullivan published in CVPR 2014. An alternative implementation of this algorithm can be found in DLIB
+	FacemarkAAM: This implementation uses an Active Appearance Model (AAM) and is based on an the paper titled “Optimization problems for fast AAM fitting in-the-wild” by G. Tzimiropoulos and M. Pantic, published in ICCV 2013.
+	FacemarkLBF: This implementation is based a paper titled “Face alignment at 3000 fps via regressing local binary features” by S. Ren published in CVPR 2014.

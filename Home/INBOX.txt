@@ -5,6 +5,9 @@ Creation-Date: 2018-08-16T22:25:26+08:00
 ====== INBOX ======
 Created 星期四 16 八月 2018
 
+====== GTD ======
+把清单中的内容移过来
+
 ====== 学习 ======
 * 整理一份机器学习术语和公式表：参考周志华的机器学习，李航，机器之心的术语表
 
@@ -19,12 +22,24 @@ opencv
 DL 
 职业进取
 
+===== Qt =====
+
+[ ] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup 
+
+
+===== opencv =====
+[ ] 把github上有关dlib和opencv的项目列个表， github.search(dlib)
+[ ] opencv模块列表
+[ ] opencv和VS插件，可以查看中间结果的
+[ ] opencv和Qt
+[ ] 调查QT与opencv的结合方式，看能否直接在QT中用opencv
+
 
 ===== Brain =====
 An Open-Source Brain-Computer Interface
 https://github.com/OpenBCI
 
-ML
+===== ML =====
 [[+Knowledge_Graph]]
 
 ====== Note ======
