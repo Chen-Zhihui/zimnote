@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-30T16:38:49+08:00
+
+====== tectree ======
+Created 星期四 30 八月 2018
+
+[ ] 利用同有的笔记，构造一个技术树，以后维护 <2018-08-02
+
+
+cloud
+	distributed scheduler: Bistro
+	framework: Wangle 
+	db
+	message bus
+	
+video
+
+algorithm
+	machine learning
+	deep learning
+	
+cv
+	face
+	opencv
+	
+	
