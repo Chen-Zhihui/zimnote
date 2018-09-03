@@ -17,6 +17,8 @@ Created 星期四 16 八月 2018
 [[+logistic_regression]]
 [[+decision_tree]]
 [[+navie_bayes]]
+[[+deep_learning]]
+
 
 
 | method  | regression | classification | clustering |  feature  | other |
