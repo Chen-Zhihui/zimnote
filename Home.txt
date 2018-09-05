@@ -35,11 +35,6 @@ Created 星期四 16 八月 2018
 	[[+projects:daily:reading]]
 	[[+devtools:cpplib:opencv]] OpenCV的笔记
 	
-	
-	
-
-	
-      
 
 ====== 路线图，发展的逻辑 ======
 
