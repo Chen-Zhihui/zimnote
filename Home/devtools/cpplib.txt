@@ -48,3 +48,10 @@ https://github.com/catchorg/Catch2
 * cryptopp https://www.cryptopp.com/
 Crypto++ Library is a free C++ class library of cryptographic schemes
 https://github.com/Skycoder42/CryptoQQ wrapper for Qt
+
+
+====== third party ======
+
+===== cuDNN =====
+
+

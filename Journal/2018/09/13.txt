@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-12T22:18:07+08:00
+
+====== 星期四 13 9月 2018 ======
+
+[*] 上午给邓俊更新一个普通版本，去掉一些菜单
+[ ] 给天津更新一个新版本，用给南京准备的版本，去掉所有可能删除目标的操作，只保留删文件和空文件夹，让天津测试
+[ ] torch的训练工具
+	[ ] template
+	[ ] https://github.com/ecs-vlc/torchbearer
+	[ ] https://github.com/pytorch/ignite  把训练过程分解为训练，epoch，batch三种，共六个事件，在这些事件中可以注册回调函数，记录当前的状态
+			https://pytorch.org/ignite/quickstart.html#explanation 
+{{{code: lang="python" linenumbers="True"
+    def _run_once_on_dataset(self):
+        start_time = time.time()
+
+        try:
+            for batch in self.state.dataloader:
+                self.state.batch = batch
+                self.state.iteration += 1
+                self._fire_event(Events.ITERATION_STARTED)
+                self.state.output = self._process_function(self, batch)  计算一个batch，然后把结果记录在state中，供回调函数取用
+                self._fire_event(Events.ITERATION_COMPLETED)
+                if self.should_terminate or self.should_terminate_single_epoch:
+                    self.should_terminate_single_epoch = False
+                    break
+}}}
+			
+			metrics 注册回调，把每个batch的输出的结果转化成指标
+{{{code: lang="python" linenumbers="True"
+    def attach(self, engine, name):
+        engine.add_event_handler(Events.EPOCH_STARTED, self.started)
+        engine.add_event_handler(Events.ITERATION_COMPLETED, self.iteration_completed)
+        engine.add_event_handler(Events.EPOCH_COMPLETED, self.completed, name)
+}}}
+			
+	[ ] https://github.com/facebookresearch/visdom

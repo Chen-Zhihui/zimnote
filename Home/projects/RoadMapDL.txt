@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-08-26T22:48:44+08:00
+
+====== RoadMapDL ======
+Created 星期日 26 八月 2018
+
+===== pytorch =====
+
+[ ] caffe2编译
+https://caffe2.ai/docs/getting-started.html?platform=windows&configuration=compile
+[ ] torch训练算法，ignite，visdom
+[ ] 导入导出模型
+	* 不同框架模型的相互转换
+	* https://github.com/Microsoft/MMdnn
+	* 转换成caffe2模型，通过ONNX模型转换，所有支持ONNX的模型，都可以用于caffe2
+		https://pytorch.org/tutorials/advanced/super_resolution_with_caffe2.html
+	* caffe2可以导入什么类型的模型文件？
+[ ] caffe2做应用
+	[ ] caffe2开发环境
+conda install -c conda-forge onnx-caffe2
+
+
+
+====== NPL ======
+
+===== kiwix的桌面应用 =====
+[ ] 在Linux上编译这个应用kiwix，这个可以做为自然语言处理和知识图谱的开端，以这个库带的文本处理和索引为基础，入手自然语言处理
