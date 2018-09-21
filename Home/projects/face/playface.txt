@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-21T15:36:43+08:00
+
+====== playface ======
+Created 星期五 21 九月 2018
+
+
+===== Linux =====
+
+
+编译能通过，运行出错：怀疑用的python安装包中有png的安装包，与系统中所用的opencv的安装包冲突，定位为环境变量有问题
+
+LD_LIBRARY_PATH=
+[[/media/tony/data/ep.install.caffe2/lib:/media/tony/data/ep.install/lib/:/home/tony/local/libs/anaconda/lib/:/opt/Qt5.10.0/Tools/QtCreator/lib/Qt/lib]]
+/home/tony/workspace_solar/build-playface-Desktop_Qt_5_10_0_GCC_64bit-Debug/bin:/media/tony/data/ep.install.caffe2/lib:/home/tony/local/libs/anaconda/lib/:/opt/Qt5.10.0/Tools/QtCreator/lib/Qt/lib
+
+
+Windows

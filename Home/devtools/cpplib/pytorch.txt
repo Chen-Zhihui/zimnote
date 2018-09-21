@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-21T15:48:24+08:00
+
+====== pytorch ======
+Created 星期五 21 九月 2018
+
+不应该在环境配置上花过多时间，只在Linux上能用就可以了，以后工作开发都在Mach 

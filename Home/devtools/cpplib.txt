@@ -53,6 +53,12 @@ Crypto++ Library is a free C++ class library of cryptographic schemes
 https://github.com/Skycoder42/CryptoQQ wrapper for Qt
 
 
+====== deep learning ======
+
+[[+pytorch]]
+
+
+
 ====== third party ======
 
 ===== cuDNN =====

@@ -88,12 +88,19 @@ Created 星期四 16 八月 2018
 	[ ] 发展的逻辑：视频索引工具，目前还没有找到更好的应用场景
 		[ ] 功能要求，算法需求
 			[ ] 检测, opencv, mtcnn
+			[ ] 对齐：参考seetaface( not seetaface2)中的tform/Aligner/TransformationMakerNet
 			[ ] 追踪, opencv
 			[ ] 关键点提取, opencv
 			[ ] 头部位置估计, pnp
 			[ ] 聚类，追踪到的头像属于一个人，但一个人的头像可以出现在多个时段，需要合并
 			[ ] 识别
 			[ ] 标注：标注视频中出现的人物时间段
+		[ ] 接口定义
+			[ ] 参考seetaface, 
+				[ ] SeetaFace2中去掉了一些代码，这些代码可用于头像旋转
+				[ ] TODO: download https://pan.baidu.com/s/1HJj8PEnv3SOu6ZxVpAHPXg <2018-09-21
+				[ ] pytorch https://conda.anaconda.org/pytorch/linux-64/pytorch-0.4.1-py36_py35_py27__9.0.176_7.1.2_2.tar.bz2 <2018-09-21
+			[ ] face-everyting, https://github.com/nicehuster/face-everything
 		[ ] 性能要求
 			[ ] 快速
 				[ ] 只处理关键帧
@@ -123,6 +130,9 @@ Created 星期四 16 八月 2018
 				[ ] 这是就有点大了，如果要做的话，也应该在mitk中完成
 		[ ] 利用上面的命令行程序框架和算法库框架，写处理视频的程序
 		[ ] 输出格式暂定为json
+
+[[+playface]]
+
 
 [[+detector]]
 [[+tracker]]
