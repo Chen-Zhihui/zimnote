@@ -12,10 +12,13 @@ Created 星期一 20 八月 2018
 
 ===== cmake =====
 [[+cmake]]
+[[+qmake]]
+
 
 
 ====== Framework ======
 [[+Poco]]
+[[+boost]]
 
 
 ====== io, serialization, json, xml ======
@@ -54,4 +57,12 @@ https://github.com/Skycoder42/CryptoQQ wrapper for Qt
 
 ===== cuDNN =====
 
-
+===== portable for Windows =====
+pthread https://github.com/GerHobbelt/pthread-win32
+iconv https://github.com/win-iconv/win-iconv
+libm http://developer.amd.com/tools-and-sdks/archive/compute/libm/#download
+libdl https://github.com/tiny-repo/dlfcn-win32
+ffmpeg下载ffmpeg，不要在windows上编译，用现成的即可 https://ffmpeg.zeranoe.com/builds/ https://sourceforge.net/projects/avbuild/files/windows-desktop/
+ZLIB and BZip2 
+Download contribs for 32 bit builds. http://ftp.seqan.de/contribs/seqan-contrib-D20160115-x86.zip 
+Download contribs for 64 bit builds. http://ftp.seqan.de/contribs/seqan-contrib-D20160115-x64.zip

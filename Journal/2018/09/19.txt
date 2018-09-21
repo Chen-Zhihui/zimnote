@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-19T17:19:52+08:00
+
+====== 星期三 19 9月 2018 ======
+
+Qt
+http://download.qt.io/archive/qt/

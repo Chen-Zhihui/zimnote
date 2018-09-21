@@ -1,0 +1,75 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-19T09:36:33+08:00
+
+====== boost ======
+Created 星期三 19 九月 2018
+
+https://theboostcpplibraries.com/
+The Boost C++ Libraries
+
+if(MSVC)
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_RELEASE_LIBS       ON)
+set(Boost_USE_STATIC_LIBS        ON)
+unset(Boost_INCLUDE_DIR CACHE)
+unset(Boost_LIBRARY_DIRS CACHE)
+set(BOOST_LIBRARYDIR "E:/ws.local/boost_1_68_0_b1_rc2/lib64-msvc-14.0")
+set(BOOST_INCLUDEDIR "E:/ws.local/boost_1_68_0_b1_rc2")
+endif()
+find_package( Boost 1.5.9 REQUIRED COMPONENTS filesystem system)
+MESSAGE("Boost information:") 
+MESSAGE("  Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}") 
+MESSAGE("  Boost_LIBRARIES: ${Boost_LIBRARIES}") 
+MESSAGE("  Boost_LIBRARY_DIRS: ${Boost_LIBRARY_DIRS}") 
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS}/boost)
+LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})	
+	add_executable(gazr_estimate_head_direction tools/estimate_head_direction.cpp)    
+	target_link_libraries(gazr_estimate_head_direction gazr ${OpenCV_LIBRARIES} Boost::program_options)
+	target_link_libraries(gazr_estimate_head_direction Boost::disable_autolinking Boost::diagnostic_definitions)
+
+cmake中引入的FindBoost有几下注意事项
+1
+ The .lib files are linked statically, while .dll files are linked dynamically. I believe it's a VC project setting.
+
+2
+The "lib" prefix is for static libraries. Use link=static 
+The 's' letter is to static linking to runtime. Use runtime-link=static 
+The 'd' is debug, use variant=debug 
+The 'g' is using debug runtime, I think it's included in 'debug' variant 
+already. If not runtime-debugging=on will help. 
+
+四种运行时库runtime
+sg, s!g, !sg, !s!g
+
+动态库
+dynamic debug, dynamic runtime debug
+boost_atomic-vc140-mt-gd-x64-1_68.dll
+boost_atomic-vc140-mt-gd-x64-1_68.lib 
+
+dynamic release, runtime release 
+boost_atomic-vc140-mt-x64-1_68.dll 
+boost_atomic-vc140-mt-x64-1_68.lib
+
+静态库
+static debug, dynamic runtime debug
+!s, g, d: libboost_atomic-vc140-mt-gd-x64-1_68.lib 
+
+static debug, static runtime debug
+s, g, d : libboost_atomic-vc140-mt-sgd-x64-1_68.lib  
+
+static release, static runtime release
+r, s  : libboost_atomic-vc140-mt-s-x64-1_68.lib 
+
+static release, dynamic rutime release 
+r, !s : libboost_atomic-vc140-mt-x64-1_68.lib
+
+(1)用bjam编译出的库
+动态链接
+用VC链接boost的开发库时，由于boost中有一些头文件已定义好要链接静态链接库，此时就不需要在target_link_libraries()函数中指定要链接的库了，但需要用link_directories()包含boost静态库的目录
+
+静态链接
+set(Boost_USE_STATIC_LIBS        OFF)
+
+(2)用cmake编译出的库

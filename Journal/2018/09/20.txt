@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-19T23:06:55+08:00
+
+====== 星期四 20 9月 2018 ======
+
+"E:\ws.dl\pytorch-scripts\build_with_protobuf_VS2017_Debug\install.vcxproj" (default target) (1) ->
+"E:\ws.dl\pytorch-scripts\build_with_protobuf_VS2017_Debug\ALL_BUILD.vcxproj" (default target) (3) ->
+"E:\ws.dl\pytorch-scripts\build_with_protobuf_VS2017_Debug\caffe2\AlgorithmsTest.vcxproj" (default target) (4) ->
+"E:\ws.dl\pytorch-scripts\build_with_protobuf_VS2017_Debug\caffe2\caffe2.vcxproj" (default target) (5) ->
+(Link target) ->
+  LINK : fatal error LNK1210: exceeded internal ILK size limit; link with /INCREMENTAL:NO [E:\ws.dl\pytorch-scripts\build_with_protobuf_VS2017_Debug\caffe2\caffe2.vcxproj]
+
+	1593 Warning(s)
+	1 Error(s)
+
+
+  string(REGEX REPLACE "[-/]INCREMENTAL" "/INCREMENTAL:NO" CMAKE_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS_DEBUG}")
+  set(CMAKE_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS_DEBUG}")
+
+[ ] 编译文档
+[ ] 重新导入模型
+caffe model to caffe2 model
+https://github.com/caffe2/tutorials/blob/master/Getting_Caffe1_Models_for_Translation.ipynb
+https://caffe2.ai/docs/caffe-migration.html
+
+python -m caffe2.python.caffe_translator deploy.prototxt pretrained.caffemodel
+
+
+  add_custom_command(OUTPUT ${generated_cpp} ${cuda_generated_cpp}
+	COMMAND ${GEN_COMMAND}
+	  --install_dir ${CMAKE_BINARY_DIR}/aten/src/ATen
+	DEPENDS ${all_python} ${all_templates} ${cwrap_files} ${core_gen_checked_inputs}
+	#WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../aten/src/ATen
+	)
+
+  EXECUTE_PROCESS(
+	  COMMAND ${GEN_COMMAND} #${CMAKE_CURRENT_LIST_DIR}/../aten/src/ATen
+		--output-dependencies ${CMAKE_BINARY_DIR}/aten/src/ATen/generated_cpp.txt
+		--install_dir ${CMAKE_BINARY_DIR}/aten/src/ATen
+	  RESULT_VARIABLE RETURN_VALUE
+  )
+
+====== Caffe2 ======
+新的接口中Predictor用变量名，而不是序号，比原来有改进，这块接口已分离出去
+
+
+
+
