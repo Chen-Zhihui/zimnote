@@ -114,7 +114,6 @@ Created 星期四 16 八月 2018
 === 播放器 ===
 	* Qt的播放器不好用了，直接不播
 		* 解决办法，安装开源的DirectShow编解码包，
-		* 如https://github.com/Nevcairiel/LAVFilters, 不好用
 		* http://www.codecguide.com/
 		* 但是编解码器的效率直接影响播放效果，速度
 	* 避开这个问题，做成一个图片识别工具，不要处理视频
