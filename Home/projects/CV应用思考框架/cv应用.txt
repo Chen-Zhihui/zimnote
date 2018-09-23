@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-23T16:10:20+08:00
+
+====== cv应用 ======
+Created 星期日 23 九月 2018
+
+银行卡识别 https://github.com/portumo/chinese-bankCard-idcard-recognition
+车牌识别 https://github.com/zhubenfu/License-Plate-Detect-Recognition-via-Deep-Neural-Networks-accuracy-up-to-99.9/tree/3da0758589cd0931a84258621f8358648111dac8

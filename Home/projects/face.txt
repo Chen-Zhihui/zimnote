@@ -38,9 +38,16 @@ Created 星期四 16 八月 2018
 			[*] 启动后在当前目录或默认目录找配置文件，优先级中等
 			[*] 命令行中指定参数config=filepath, 优先级最高
 		[*] 划分功能模块，整理cmake安装脚本
-	[ ] 算法库框架 <2018-08-28
+	[ ] 算法库框架「沿着一个思路复盘，解决遇到的通用问题」 <2018-08-28
+		[ ] 注意问题
+			[ ] 首先opencv算法了解概念
+			[ ] 优先caffe转成caffe2模型，做C++接口
+		[ ] 重点参考
+			[ ] https://github.com/tpys/face-everthing
 		[ ] 算法测试框架：用OpenCV实现如何算法 
 			[*] 头像检测
+				[ ] mtcnn using caffe2, cmake
+				[ ] RSA
 			[*] 画检测框
 			[*] 追踪，
 			[*] **关键点检测**，
@@ -52,18 +59,32 @@ Created 星期四 16 八月 2018
 			[*] 命令行工具
 			[*] https://github.com/kurnianggoro/GSOC2017 FaceMark的参考
 			[*] 更换一个更精准的识别算法，或是用多个识别算法做二次识别，用MTCNN做二次识别，消除假识别
-			[ ] **要考虑下，如何才能简化接口，方便编程**
-			[ ] 运算速度
-				[ ] 换用深度学习框架，因为经过专门的优化，所以速度要快一些，如果能用本机的GPU就更好了
-				[ ] 只处理关键帧，目前可以不考虑，只考虑算法收集
-			[ ] 引入识别算法时要用深度学习框架
-		[ ] 阶段性结果
-			[ ] 用opencv完成检测，特征点识取，追踪算法
-			[ ] pyannote，包括聚类和识别算法
-			[ ] 使用深度学习框架，配全这些算法
-			[ ] 熟悉算法训练过程，调参
-		[ ] 收集比较算法（没有价值，只是把别人的算法用了一下，如果是在项目中比较应用是有价值的）
-			[ ] 目前由企业开源的算法 libfacedetection, 中科院
+			[ ] 头像对齐
+				[ ] tform, cp2tform, python的实现https://github.com/clcarwin/sphereface_pytorch/blob/master/matlab_cp2tform.py
+				ALG: cp2tform, control point to transform, 该函数由输入的两幅图像的对应点生成变换结构，有函数名可以简单的理解为:contrlol points(cp) to transform(tform)  
+				EXP: github + algname + language:C++
+	[ ] 头像预处理
+		[ ] 边缘随机化
+	[ ] 特征提取
+		[ ] 需要一个现成的模型
+			[ ] sphereface+caffe -> caffe2
+				* pytorch https://github.com/clcarwin/sphereface_pytorch  值得用新版的pytorch复现一次，这里已有完整的思路了
+				* EXP: insightface + Pytorch https://github.com/TreB1eN/InsightFace_Pytorch 调查清楚这个训练库用到的数据我现有模型用于复现 <2018-09-24 
+		[ ] 特征以适当的数据库保存
+	[ ] 检索框架
+		[ ] FALCNN，这是一个已知可用的算法，并且有相关参数
+	[ ] **要考虑下，如何才能简化接口，方便编程**
+	[ ] 运算速度
+		[ ] 换用深度学习框架，因为经过专门的优化，所以速度要快一些，如果能用本机的GPU就更好了
+		[ ] 只处理关键帧，目前可以不考虑，只考虑算法收集
+	[ ] 引入识别算法时要用深度学习框架
+	[ ] 阶段性结果
+		[ ] 用opencv完成检测，特征点识取，追踪算法
+		[ ] pyannote，包括聚类和识别算法
+		[ ] 使用深度学习框架，配全这些算法
+		[ ] 熟悉算法训练过程，调参
+	[ ] 收集比较算法（没有价值，只是把别人的算法用了一下，如果是在项目中比较应用是有价值的）
+		[ ] 目前由企业开源的算法 libfacedetection, 中科院
 	[ ] 接口定义
 		[ ] 以opencv为开发库，整理有关face的全部算法  
 			[ ] 可能需要自己编译opencv

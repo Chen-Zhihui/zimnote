@@ -6,3 +6,23 @@ Creation-Date: 2018-09-21T15:48:24+08:00
 Created 星期五 21 九月 2018
 
 不应该在环境配置上花过多时间，只在Linux上能用就可以了，以后工作开发都在Mach 
+
+
+=== build for linux ===
+  CMAKE_ARGS+=("-DCMAKE_INSTALL_PREFIX=/media/tony/data/ep.install.caffe2.local")
+  CMAKE_ARGS+=("-DBUILD_PYTHON=OFF")
+  CMAKE_ARGS+=("-DUSE_CUDA=OFF")
+  CMAKE_ARGS+=("-DUSE_NNPACK=OFF")
+  CMAKE_ARGS+=("-DUSE_CUB=OFF")
+  CMAKE_ARGS+=("-DUSE_GLOG=OFF")
+  CMAKE_ARGS+=("-DUSE_LMDB=OFF")
+  CMAKE_ARGS+=("-DUSE_GFLAGS=OFF")
+  CMAKE_ARGS+=("-DUSE_LEVELDB=OFF")
+  CMAKE_ARGS+=("-DUSE_ROCKSDB=OFF")
+  CMAKE_ARGS+=("-DUSE_OPENCV=OFF")
+  CMAKE_ARGS+=("-DBUILD_SHARED_LIBS=ON")
+  CMAKE_ARGS+=("-DCMAKE_DEBUG_POSTFIX=d")
+
+
+===== pre-build for linux =====
+conda install -c caffe2 pytorch-caffe2-cuda9.0-cudnn7

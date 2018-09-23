@@ -5,14 +5,14 @@ Creation-Date: 2018-09-08T22:22:16+08:00
 ====== 星期日 09 9月 2018 ======
 
 [*] EBox更新：七彩云专用，显示节目代码一列
-[ ] pytorch example code
-[ ] mkl-dnn install
-[ ] change cuda 92 to cuda 90
-[ ] compile torch ok
-[ ] pytorch autograd
-t.no_grad?? show help(t.no_grad)
-%timeit -n 100 a+b
-[ ] compile doc for torch
+[*] pytorch example code
+[*] mkl-dnn install
+[*] change cuda 92 to cuda 90
+[*] compile torch ok
+[*] pytorch autograd
+EXP: t.no_grad?? show help(t.no_grad)
+EXP: %timeit -n 100 a+b
+[*] compile doc for torch
 
 有人已编译好pytorch, 选择conda install -c pytorch pytorch
 if you want to know what exactly is coming from conda, look at the conda listings and you can cross-reference with the github tags. For example, conda search -c peterjc123 -f pytorch.
@@ -22,5 +22,5 @@ if you want to know what exactly is coming from conda, look at the conda listing
 	https://anaconda.org/anaconda/pytorch
 @djangoma why do you need 0.2 on windows? There should be plenty of posts about how to upgrade your code and you can just run on current pytorch. If you really need 0.2 on windows, you can use either docker or WSL but you wouldn't get GPU support.
 
-【经验】从Anaconda cloud上找最新的安装包，比如pytorch
+EXP: 从Anaconda cloud上找最新的安装包，比如pytorch
 conda install -c caffe2 pytorch-caffe2-cuda9.0-cudnn7 

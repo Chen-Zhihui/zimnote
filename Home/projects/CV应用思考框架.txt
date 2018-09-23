@@ -13,6 +13,9 @@ Created 星期四 16 八月 2018
 
 ====== 应用 ======
 
+[[+cv应用]]
+
+
 ===== 人脸识别 =====
 
 
@@ -23,6 +26,9 @@ Created 星期四 16 八月 2018
 ===== 胸片 =====
 
 ===== 视频索引 =====
+
+===== 车牌识别 =====
+License-Plate https://github.com/zhubenfu/License-Plate-Detect-Recognition-via-Deep-Neural-Networks-accuracy-up-to-99.9
 
 ====== 研发平台 ======
 
@@ -35,7 +41,7 @@ Created 星期四 16 八月 2018
 		* __需要显示深度学习网络中不同结点的输出结果__
 
 		决策：
-		* 这个不能占用太长时间，不能当重点
+	* 这个不能占用太长时间，不能当重点
 
 	* 学习的平台，IPython足够好，只要能看算法效果就可以了
 
