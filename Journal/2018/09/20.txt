@@ -24,7 +24,7 @@ caffe model to caffe2 model
 https://github.com/caffe2/tutorials/blob/master/Getting_Caffe1_Models_for_Translation.ipynb
 https://caffe2.ai/docs/caffe-migration.html
 
-python -m caffe2.python.caffe_translator deploy.prototxt pretrained.caffemodel
+EXP: python -m caffe2.python.caffe_translator deploy.prototxt pretrained.caffemodel
 
 
   add_custom_command(OUTPUT ${generated_cpp} ${cuda_generated_cpp}
