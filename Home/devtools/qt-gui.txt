@@ -29,10 +29,14 @@ https://download.qt.io/official_releases/qt-installer-framework/
 https://github.com/probonopd/linuxdeployqt
 [ ] 尝试：Linux下qt安装包制作
 
+===== update =====
+https://github.com/Skycoder42/QtAutoUpdater
+
+
 ====== AppFrm ======
 
 ===== QtMvvm =====
-[ ] 尝试：用这个库实现一些简单的操作界面还是很好的，千万别用于做应用框架，后期自定义控件是会很有困难
+[x] 尝试：用这个库实现一些简单的操作界面还是很好的，千万别用于做应用框架，后期自定义控件是会很有困难
 Understanding how QtMvvm works
 The general idea is the following: You create **viewmodels** in your core project, which represent uis. They typically contain all the properties relevant for the ui, methods (slots) that can be called (e.g. on a button click) and signals to inform the ui about changes and other events. Thus, you can use the as ui "placeholders". Of course, They only contain the ui logic, not the actual uis.
 The CoreApp is what's reponsible for managing those viewmodels. Showing a viewmodel, as well as messages (alert dialogs) are all controlled by the coreapp. The coreapp uses a so called presenters to create the actual uis. The presenters are located in the ui projects and they are the most complicated part. Their main task is to find ui implementations for viewmodel (called views), and manage the life cycle as well as the presentation of those real views. The presenters are where the decision is made, how a specific view should be shown.

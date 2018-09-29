@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-29T10:21:27+08:00
+
+====== toolchain ======
+Created 星期六 29 九月 2018
+
+====== git ======
+
+下载git库的目录，而不是全部代码
+https://kinolien.github.io/gitzip/
+
+
+====== cmake ======
+[[+cmake]]
+
+
+====== qtcreator ======
+
+工程模板
+If you are, for example, working on linux, create a new folder called QtMvvm inside of $HOME/.config/QtProject/qtcreator/templates/wizards and copy the contents there. After restarting QtCreator, the project template should appear in the Applications section of the new-dialog as QtMvvm Application Project.

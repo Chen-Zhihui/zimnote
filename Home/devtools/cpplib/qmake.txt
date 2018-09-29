@@ -5,7 +5,10 @@ Creation-Date: 2018-09-18T17:10:54+08:00
 ====== qmake ======
 Created 星期二 18 九月 2018
 
+===== installer for qt =====
+http://download.qt.io/
 
+===== opencv =====
 # opencv
 win32 {
 	#OPENCV_DIR = E:/opt/opencv/build/x64/vc14
@@ -15,3 +18,4 @@ win32 {
 android {
 	#OPENCV_DIR = /opt/android/OpenCV-android-sdk/sdk/native
 }
+

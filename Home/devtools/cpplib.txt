@@ -11,7 +11,7 @@ Created 星期一 20 八月 2018
 [[+vcpkg]]
 
 ===== cmake =====
-[[+cmake]]
+[[toolchain:cmake]]
 [[+qmake]]
 
 
@@ -60,6 +60,17 @@ https://github.com/Skycoder42/CryptoQQ wrapper for Qt
 
 
 ====== third party ======
+
+===== cute =====
+
+==== mvvm ====
+https://install.skycoder42.de/qtmodules/linux_x64/qt5110/
+目前看，这个库只能做比较简单的界面，越复杂的界面需要的模型越复杂，但这个库的好处是把数据和界面的展示方式分隔开
+？能一能不做为程序框架，只做为开发库使用，也就是说现有一个程序框架，需要弹出一个对话框，这是要用一个这个库
+？能不能与其他控件融合，没见到方法
+？突出点是可以同时做qml和widget两个界面，有用吗？好像没有用处
+？局限点是界面和逻辑共用的数据只包含那些可序列化的数据
+结论：不用，用处不大，局限很多。更需要的是一个QtPropertyBrowser类似的组件，能够直接修改参数即可
 
 ===== cuDNN =====
 
