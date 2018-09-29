@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-29T14:40:35+08:00
+
+====== qpm ======
+Created 星期六 29 九月 2018
+
+windows
+	https://storage.googleapis.com/www.qpm.io/download/latest/windows_amd64/qpm.exe
+	https://storage.googleapis.com/www.qpm.io/download/latest/windows_386/qpm.exe
+C:\Program Files\qpm

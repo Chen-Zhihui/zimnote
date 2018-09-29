@@ -10,16 +10,21 @@ Created 星期五 17 八月 2018
 * Skycoder42 专注Qt界面，QML和Widget
 https://github.com/Skycoder42
 此人近两年非常活跃，做客户端软件，先参考此人作品
+
 * https://github.com/benlau
 quickflux, Android
-* https://github.com/Cutehacks
-qpm, duperagent, pdfium-qmake, 
 
-awesome
+* https://github.com/Cutehacks
+qpm
+duperagent
+pdfium-qmake
+
+[[+awesome]]
 https://github.com/mikalv/awesome-qt-qml
 
+
 ====== Package & CI ======
-qpm 
+qpm http://www.qpm.io/packages/index.html
 qpmx https://github.com/Skycoder42/qpmx
 
 ===== QIF =====
@@ -140,6 +145,21 @@ https://github.com/steveire/grantlee.git
 
 ===== model =====
 JsonListModel https://github.com/Cutehacks/gel
+
+====== MultiMedia ======
+* QtAV 
+编译太复杂，Windows自编译过程中有失败，自编译不稳定
+
+* openshot
+[ ] todo 
+
+* MTL & shotcut
+
+====== CV ======
+
+* opencv <->QImage
+Qt and OpenCV2 Integration, cv::Mat <==> QImage 
+https://github.com/dbzhang800/QtOpenCV
 
 ====== Game ======
 [[+Game]]
