@@ -15,7 +15,10 @@ quickflux, Android
 * https://github.com/Cutehacks
 qpm, duperagent, pdfium-qmake, 
 
-====== Package ======
+awesome
+https://github.com/mikalv/awesome-qt-qml
+
+====== Package & CI ======
 qpm 
 qpmx https://github.com/Skycoder42/qpmx
 
@@ -24,6 +27,7 @@ QtIFW-Advanced-Setup 在工程文件中制作安装包
 https://github.com/Skycoder42/QtIFW-Advanced-Setup
 http://doc.qt.io/qtinstallerframework/
 https://download.qt.io/official_releases/qt-installer-framework/
+https://github.com/Larpon/linuxdeployqt.py
 
 ===== linuxdeployqt =====
 https://github.com/probonopd/linuxdeployqt
@@ -32,6 +36,9 @@ https://github.com/probonopd/linuxdeployqt
 ===== update =====
 https://github.com/Skycoder42/QtAutoUpdater
 
+===== CI =====
+https://github.com/Skycoder42/QtModules
+https://github.com/benlau/qtci
 
 ====== AppFrm ======
 
