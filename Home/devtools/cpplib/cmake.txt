@@ -5,6 +5,36 @@ Creation-Date: 2018-08-23T13:58:47+08:00
 ====== cmake ======
 Created 星期四 23 八月 2018
 
+===== cmd =====
+cmake --build {BUILD_DIR_PATH} --target ALL_BUILD --config {BUILD_TYPE}
+Example
+cmake --build . --target ALL_BUILD --config Release
+Long answer
+cmake -G{GENERATOR_NAME} -B{BUILD_DIR_PATH} -H{SOURCE_DIR_PATH}
+cmake --build {BUILD_DIR_PATH} --target ALL_BUILD --config {BUILD_TYPE}
+Example
+cmake -GVisual Studio 14 -Bbuild/win32/x86 -H.    
+cmake --build build/win32/x86 --target ALL_BUILD --config Release
+Additional info
+	"-G" - specifies the generator name
+	"-B" - specifies path to the build folder
+	"-H" - specifies path to the source folder
+
+
+====== cross platform switch ======
+
+| toolchain | windows              | linux | mac       | ios | android |
+|:----------|:---------------------|:------|:----------|:----|:--------|
+| c++       |                      |       |           |     |         |
+| cmake     | if(WIN32)            |       | if(APPLE) |     |         |
+| qmake     | win32 win32-msvc2012 |       | mac       | ios | android |
+
+
+====== if ======
+
+if(CMAKE_BUILD_TYPE MATCHES "Debug")	
+
+
 ===== add_library =====
 
 target_compile_definitions
@@ -109,3 +139,8 @@ endmacro()
 
 
 ===== use 3rd =====
+
+===== link debug and release =====
+add_executable( MyEXE ${SOURCES})
+target_link_libraries( MyEXE debug 3PDebugLib)
+target_link_libraries( MyEXE optimized 3PReleaseLib)

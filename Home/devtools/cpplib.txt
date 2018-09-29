@@ -63,6 +63,11 @@ https://github.com/Skycoder42/CryptoQQ wrapper for Qt
 
 ===== cuDNN =====
 
+==== cuda for ubuntu ====
+apt autoremove
+restart pc
+install nvidia-410
+
 ===== portable for Windows =====
 pthread https://github.com/GerHobbelt/pthread-win32
 iconv https://github.com/win-iconv/win-iconv
@@ -72,3 +77,6 @@ ffmpeg下载ffmpeg，不要在windows上编译，用现成的即可 https://ffmp
 ZLIB and BZip2 
 Download contribs for 32 bit builds. http://ftp.seqan.de/contribs/seqan-contrib-D20160115-x86.zip 
 Download contribs for 64 bit builds. http://ftp.seqan.de/contribs/seqan-contrib-D20160115-x64.zip
+
+===== for mac =====
+[[+rpath]]
