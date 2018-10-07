@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-30T17:13:23+08:00
+
+====== 星期日 30 9月 2018 ======
+
+[ ] 做安装包，qpmx, qdirstat
+[ ] 检查数据是否完整，要把算例跑起来

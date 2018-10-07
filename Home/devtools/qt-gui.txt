@@ -30,9 +30,36 @@ qpmx https://github.com/Skycoder42/qpmx
 ===== QIF =====
 QtIFW-Advanced-Setup 在工程文件中制作安装包
 https://github.com/Skycoder42/QtIFW-Advanced-Setup
+工具目录
+linuxdeployqt  
+
+installer
+QIF设置变量 QTIFW_BIN＝/opt/QtIFW-3.0.4/bin
+环境变量 INSTALL_ROOT 决定安装的路径，在安装阶段可设置
+
 http://doc.qt.io/qtinstallerframework/
 https://download.qt.io/official_releases/qt-installer-framework/
 https://github.com/Larpon/linuxdeployqt.py
+
+普通工程设置办法
+（1）qpmx.json
+（2）规划安装路径
+target.path = /packages/de.skycoder42.untitled/data
+INSTALLS += target
+（3）QIF设置 
+meta, data目录及安装脚本
+CONFIG += qtifw_target qtifw_auto_ts
+QTIFW_BIN=/opt/QtIFW-3.0.4/bin
+QTIFW_TARGET = untitled_installer
+（4）qpmx生成的翻译文件安装 
+qpmx_ts_target.path = /packages/de.skycoder42.qtifw.sample/data/translations
+（5）引用QIF
+include(/media/tony/data/ws.cute.mvvm/QtIFW-Advanced-Setup/qtifw-advanced-setup.pri)
+（6）引用qpmx
+!ReleaseBuild:!DebugBuild:!system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)): error(qpmx initialization failed. Check the compilation log for details.)
+else: include($$OUT_PWD/qpmx_generated.pri)
+（7）遗留问题，没有处理qml文件，算了吧，还是每个工程写一个安装脚本吧，再用qif, linuxdepoyqt生成安装包备用即可
+
 
 ===== linuxdeployqt =====
 https://github.com/probonopd/linuxdeployqt

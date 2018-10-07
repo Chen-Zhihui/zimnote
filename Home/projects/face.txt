@@ -7,7 +7,10 @@ Created 星期四 16 八月 2018
 
 目标：
 
-基础程序 
+
+
+===== 基础程序 =====
+
 	[ ] 开发环境
 		[*] 要看到命令行的输出
 
@@ -62,10 +65,15 @@ Created 星期四 16 八月 2018
 			[ ] 头像对齐
 				[ ] tform, cp2tform, python的实现https://github.com/clcarwin/sphereface_pytorch/blob/master/matlab_cp2tform.py
 				ALG: cp2tform, control point to transform, 该函数由输入的两幅图像的对应点生成变换结构，有函数名可以简单的理解为:contrlol points(cp) to transform(tform)  
-				EXP: github + algname + language:C++
+				EXP: github + algname + language:C++ 
 	[ ] 头像预处理
 		[ ] 边缘随机化
 	[ ] 特征提取
+		[ ] 准备数据
+			[ ] 从现有的训练数据中提取照片
+			[ ] 对齐操作
+			[ ] 准备一组小量的数据，用于测试
+			[ ] 准备一组小量数据，但每个人都有一定数目的照片
 		[ ] 需要一个现成的模型
 			[ ] sphereface+caffe -> caffe2
 				* pytorch https://github.com/clcarwin/sphereface_pytorch  值得用新版的pytorch复现一次，这里已有完整的思路了
@@ -171,3 +179,19 @@ Created 星期四 16 八月 2018
 
 
 [[+people]]
+
+===== 数据 =====
+@dataset
+
+===== dataset =====
+
+===== data api =====
+Insightface集中了多个数据集，并提供了百度网盘的下载，格式，mxnet
+[ ] ms1m-v2
+[*] ms1m-v1
+[ ] vggface2
+[*] casia-webface
+[ ] glint-all
+[*] glint-asia
+
+Insightface_pytorch，把insightface的数据格式，转换成普通的文件格式
