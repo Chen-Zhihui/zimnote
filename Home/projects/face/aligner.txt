@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-23T16:08:03+08:00
+
+====== aligner ======
+Created 星期日 23 九月 2018
+
+
+===== cp2tform =====
+
+* python 
+search https://github.com/search?l=Python&q=cp2tform+language%3AC%2B%2B&type=Code
+https://github.com/walkoncross/mtcnn-caffe-zyf/blob/35fc05c5d55d0380108d5c85d27dd7c69bd1a4bd/face_aligner/matlab_cp2tform.py
+
+* C++
+search https://github.com/search?p=1&q=cp2tform+language%3AC%2B%2B&type=Code
+https://github.com/yangfly/mtcnn/blob/master/src/core/cp2tform.cpp
+
+
+===== mtcnn =====
+face detect and align 
+https://github.com/zhanglaplace/3000fps-mtcnn
+
+
+===== RSA =====
+Code and some data for 'Recurrent Scale Approximation for Object Detection in CNN' in ICCV 2017 
+https://github.com/sciencefans/RSA-for-object-detection
+

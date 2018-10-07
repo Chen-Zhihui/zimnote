@@ -10,13 +10,21 @@ Created 星期五 17 八月 2018
 * Skycoder42 专注Qt界面，QML和Widget
 https://github.com/Skycoder42
 此人近两年非常活跃，做客户端软件，先参考此人作品
+
 * https://github.com/benlau
 quickflux, Android
-* https://github.com/Cutehacks
-qpm, duperagent, pdfium-qmake, 
 
-====== Package ======
-qpm 
+* https://github.com/Cutehacks
+qpm
+duperagent
+pdfium-qmake
+
+[[+awesome]]
+https://github.com/mikalv/awesome-qt-qml
+
+
+====== Package & CI ======
+qpm http://www.qpm.io/packages/index.html
 qpmx https://github.com/Skycoder42/qpmx
 
 ===== QIF =====
@@ -24,15 +32,23 @@ QtIFW-Advanced-Setup 在工程文件中制作安装包
 https://github.com/Skycoder42/QtIFW-Advanced-Setup
 http://doc.qt.io/qtinstallerframework/
 https://download.qt.io/official_releases/qt-installer-framework/
+https://github.com/Larpon/linuxdeployqt.py
 
 ===== linuxdeployqt =====
 https://github.com/probonopd/linuxdeployqt
 [ ] 尝试：Linux下qt安装包制作
 
+===== update =====
+https://github.com/Skycoder42/QtAutoUpdater
+
+===== CI =====
+https://github.com/Skycoder42/QtModules
+https://github.com/benlau/qtci
+
 ====== AppFrm ======
 
 ===== QtMvvm =====
-[ ] 尝试：用这个库实现一些简单的操作界面还是很好的，千万别用于做应用框架，后期自定义控件是会很有困难
+[x] 尝试：用这个库实现一些简单的操作界面还是很好的，千万别用于做应用框架，后期自定义控件是会很有困难
 Understanding how QtMvvm works
 The general idea is the following: You create **viewmodels** in your core project, which represent uis. They typically contain all the properties relevant for the ui, methods (slots) that can be called (e.g. on a button click) and signals to inform the ui about changes and other events. Thus, you can use the as ui "placeholders". Of course, They only contain the ui logic, not the actual uis.
 The CoreApp is what's reponsible for managing those viewmodels. Showing a viewmodel, as well as messages (alert dialogs) are all controlled by the coreapp. The coreapp uses a so called presenters to create the actual uis. The presenters are located in the ui projects and they are the most complicated part. Their main task is to find ui implementations for viewmodel (called views), and manage the life cycle as well as the presentation of those real views. The presenters are where the decision is made, how a specific view should be shown.
@@ -129,6 +145,21 @@ https://github.com/steveire/grantlee.git
 
 ===== model =====
 JsonListModel https://github.com/Cutehacks/gel
+
+====== MultiMedia ======
+* QtAV 
+编译太复杂，Windows自编译过程中有失败，自编译不稳定
+
+* openshot
+[ ] todo 
+
+* MTL & shotcut
+
+====== CV ======
+
+* opencv <->QImage
+Qt and OpenCV2 Integration, cv::Mat <==> QImage 
+https://github.com/dbzhang800/QtOpenCV
 
 ====== Game ======
 [[+Game]]

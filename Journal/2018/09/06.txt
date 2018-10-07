@@ -1,0 +1,347 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-06T12:59:23+08:00
+
+====== 星期四 06 9月 2018 ======
+
+
+===== build pytorch =====
+pip install ninja
+pip install mkl
+
+%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+%windir%\System32\cmd.exe "/K" E:\ws.local\Anaconda3\Scripts\activate.bat E:\ws.local\Anaconda3
+
+[ ] 需手工安装mkl
+
+%windir%\System32\cmd.exe "/K" E:\ws.local\Anaconda3\Scripts\activate.bat E:\ws.local\Anaconda3
+set PYTORCH_BUILD_VERSION=0.4.1
+set PYTORCH_BUILD_NUMBER=100
+set MKLProductDir=E:\installer-download\mkl
+set MAGMA_HOME=E:\installer-download\mkl\magma_cuda92\magma\install
+
+
+====== mkl & magma ======
+
+REM Make sure you have 7z and curl installed.
+
+REM Download MKL files
+curl https://s3.amazonaws.com/ossci-windows/mkl_2018.2.185.7z -k -O
+7z x -aoa mkl_2018.2.185.7z -omkl
+
+REM Download MAGMA files
+REM cuda90/cuda91 is also available in the following line.
+set CUDA_PREFIX=cuda80
+curl -k https://s3.amazonaws.com/ossci-windows/magma_%CUDA_PREFIX%_release_mkl_2018.2.185.7z -o magma.7z
+7z x -aoa magma.7z -omagma
+
+REM Setting essential environment variables
+set "CMAKE_INCLUDE_PATH=%cd%\\mkl\\include"
+set "LIB=%cd%\\mkl\\lib;%LIB%"
+set "MAGMA_HOME=%cd%\\magma"
+
+====== cmake ======
+
+
+REM Let's install ninja first.
+pip install ninja
+
+REM Set it as the cmake generator
+set CMAKE_GENERATOR=Ninja
+
+====== output ======
+
+ E:\ws.dl\pytorch-scripts\pytorch>mkdir build
+A subdirectory or file build already exists.
+
+(base) E:\ws.dl\pytorch-scripts\pytorch>cd build
+
+(base) E:\ws.dl\pytorch-scripts\pytorch\build>cmake .. -G "Ninja"                   -DCMAKE_BUILD_TYPE=Release                   -DBUILD_TORCH="ON"                   -DNVTOOLEXT_HOME="C:/Program Files/NVIDIA Corporation/NvToolsExt/"                   -DNO_API=ON                   -DBUILD_SHARED_LIBS="ON"                   -DBUILD_PYTHON=OFF                   -DBUILD_BINARY=OFF                   -DONNX_NAMESPACE=onnx_torch                   -DUSE_CUDA=1                   -DUSE_CUDNN=OFF                   -DUSE_NNPACK=1                   -DUSE_GLOG=OFF                   -DUSE_GFLAGS=OFF                   -DCUDNN_INCLUDE_DIR=""                   -DCUDNN_LIB_DIR=""                   -DCUDNN_LIBRARY=""                   -DNO_MKLDNN=1                   -DMKLDNN_INCLUDE_DIR=""                   -DMKLDNN_LIB_DIR=""                   -DMKLDNN_LIBRARY=""                   -DATEN_NO_CONTRIB=1                   -DCMAKE_INSTALL_PREFIX="E:/ws.dl/pytorch-scripts/pytorch/torch/lib/tmp_install"                   -DCMAKE_EXPORT_COMPILE_COMMANDS=1                   -DCMAKE_C_FLAGS=""                   -DCMAKE_CXX_FLAGS="/EHa "                   -DCMAKE_EXE_LINKER_FLAGS=""                   -DCMAKE_SHARED_LINKER_FLAGS=""                   -DUSE_ROCM=0
+-- Need to define long as a separate typeid.
+-- std::exception_ptr is supported.
+-- NUMA is disabled
+-- Current compiler supports avx2 extention. Will build perfkernels.
+-- Building using own protobuf under third_party per request.
+-- Use custom protobuf build.
+-- Caffe2 protobuf include directory: $<BUILD_INTERFACE:E:/ws.dl/pytorch-scripts/pytorch/third_party/protobuf/src>$<INSTALL_INTERFACE:include>
+-- The BLAS backend of choice:MKL
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl - guide - pthread - m]
+--   Library mkl: not found
+CMake Warning at cmake/Dependencies.cmake:90 (message):
+  MKL could not be found.  Defaulting to Eigen
+Call Stack (most recent call first):
+  CMakeLists.txt:164 (include)
+
+
+CMake Warning at cmake/External/nnpack.cmake:21 (message):
+  NNPACK not supported on MSVC yet.  Turn this warning off by USE_NNPACK=OFF.
+Call Stack (most recent call first):
+  cmake/Dependencies.cmake:110 (include)
+  CMakeLists.txt:164 (include)
+
+
+CMake Warning at cmake/Dependencies.cmake:120 (message):
+  Not compiling with NNPACK.  Suppress this warning with -DUSE_NNPACK=OFF
+Call Stack (most recent call first):
+  CMakeLists.txt:164 (include)
+
+
+-- Using third party subdirectory Eigen.
+-- Could NOT find pybind11 (missing: pybind11_INCLUDE_DIR)
+-- Found CUDA: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2 (found suitable version "9.2", minimum required is "7.0")
+-- Caffe2: CUDA detected: 9.2
+-- Caffe2: CUDA nvcc is: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/bin/nvcc.exe
+-- Caffe2: CUDA toolkit directory: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2
+-- Caffe2: Header version is: 9.2
+-- Could NOT find CUDNN (missing: CUDNN_INCLUDE_DIR CUDNN_LIBRARY)
+CMake Warning at cmake/public/cuda.cmake:96 (message):
+  Caffe2: Cannot find cuDNN library.  Turning the option off
+Call Stack (most recent call first):
+  cmake/Dependencies.cmake:473 (include)
+  CMakeLists.txt:164 (include)
+
+
+-- Autodetected CUDA architecture(s): 6.1
+-- Added CUDA NVCC flags for: -gencode;arch=compute_61,code=sm_61
+-- Could NOT find CUB (missing: CUB_INCLUDE_DIR)
+--
+-- ******** Summary ********
+--   CMake version         : 3.12.0
+--   CMake command         : C:/Program Files/CMake/bin/cmake.exe
+--   System                : Windows
+--   C++ compiler          : C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.15.26726/bin/Hostx64/x64/cl.exe
+--   C++ compiler version  : 19.15.26726.0
+--   CXX flags             : /EHa
+--   Build type            : Release
+--   Compile definitions   :
+--   CMAKE_PREFIX_PATH     :
+--   CMAKE_INSTALL_PREFIX  : E:/ws.dl/pytorch-scripts/pytorch/torch/lib/tmp_install
+--   CMAKE_MODULE_PATH     : E:/ws.dl/pytorch-scripts/pytorch/cmake/Modules;E:/ws.dl/pytorch-scripts/pytorch/cmake/public/../Modules_CUDA_fix
+--
+--   ONNX version          : 1.3.0
+--   ONNX NAMESPACE        : onnx_torch
+--   ONNX_BUILD_TESTS      : OFF
+--   ONNX_BUILD_BENCHMARKS : OFF
+--   ONNX_USE_LITE_PROTO   : OFF
+--
+--   Protobuf compiler     :
+--   Protobuf includes     :
+--   Protobuf libraries    :
+--   BUILD_ONNX_PYTHON     : OFF
+-- Found CUDA with FP16 support, compiling with torch.cuda.HalfTensor
+-- Removing -DNDEBUG from compile flags
+-- Compiling with OpenMP support
+-- MAGMA not found. Compiling without MAGMA support
+-- Could not find hardware support for NEON on this machine.
+-- No OMAP3 processor on this machine.
+-- No OMAP4 processor on this machine.
+-- SSE2 Found
+-- SSE3 Found
+-- AVX Found
+-- AVX2 Found
+-- Atomics: using MSVC intrinsics
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl - guide - pthread - m]
+--   Library mkl: not found
+-- MKL library not found
+-- Checking for [openblas]
+--   Library openblas: BLAS_openblas_LIBRARY-NOTFOUND
+-- Checking for [openblas - pthread]
+--   Library openblas: BLAS_openblas_LIBRARY-NOTFOUND
+-- Checking for [libopenblas]
+--   Library libopenblas: BLAS_libopenblas_LIBRARY-NOTFOUND
+-- Checking for [goto2 - gfortran]
+--   Library goto2: BLAS_goto2_LIBRARY-NOTFOUND
+-- Checking for [goto2 - gfortran - pthread]
+--   Library goto2: BLAS_goto2_LIBRARY-NOTFOUND
+-- Checking for [acml - gfortran]
+--   Library acml: BLAS_acml_LIBRARY-NOTFOUND
+-- Checking for [Accelerate]
+--   Library Accelerate: BLAS_Accelerate_LIBRARY-NOTFOUND
+-- Checking for [vecLib]
+--   Library vecLib: BLAS_vecLib_LIBRARY-NOTFOUND
+-- Checking for [ptf77blas - atlas - gfortran]
+--   Library ptf77blas: BLAS_ptf77blas_LIBRARY-NOTFOUND
+-- Checking for [blas]
+--   Library blas: BLAS_blas_LIBRARY-NOTFOUND
+-- Cannot find a library with BLAS API. Not using BLAS.
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_sequential - mkl_core]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_sequential - mkl_core]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - libiomp5md - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl_intel_lp64 - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel_lp64: not found
+-- Checking for [mkl_intel - mkl_intel_thread - mkl_core - pthread]
+--   Library mkl_intel: not found
+-- Checking for [mkl - guide - pthread - m]
+--   Library mkl: not found
+-- MKL library not found
+-- Checking for [openblas]
+--   Library openblas: BLAS_openblas_LIBRARY-NOTFOUND
+-- Checking for [openblas - pthread]
+--   Library openblas: BLAS_openblas_LIBRARY-NOTFOUND
+-- Checking for [libopenblas]
+--   Library libopenblas: BLAS_libopenblas_LIBRARY-NOTFOUND
+-- Checking for [goto2 - gfortran]
+--   Library goto2: BLAS_goto2_LIBRARY-NOTFOUND
+-- Checking for [goto2 - gfortran - pthread]
+--   Library goto2: BLAS_goto2_LIBRARY-NOTFOUND
+-- Checking for [acml - gfortran]
+--   Library acml: BLAS_acml_LIBRARY-NOTFOUND
+-- Checking for [Accelerate]
+--   Library Accelerate: BLAS_Accelerate_LIBRARY-NOTFOUND
+-- Checking for [vecLib]
+--   Library vecLib: BLAS_vecLib_LIBRARY-NOTFOUND
+-- Checking for [ptf77blas - atlas - gfortran]
+--   Library ptf77blas: BLAS_ptf77blas_LIBRARY-NOTFOUND
+-- Checking for [blas]
+--   Library blas: BLAS_blas_LIBRARY-NOTFOUND
+-- Cannot find a library with BLAS API. Not using BLAS.
+-- LAPACK requires BLAS
+-- Cannot find a library with LAPACK API. Not using LAPACK.
+-- Found CUDA: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2 (found suitable version "9.2", minimum required is "5.5")
+-- CuDNN not found. Compiling without CuDNN support
+disabling ROCM because NOT USE_ROCM is set
+-- MIOpen not found. Compiling without MIOpen support
+disabling MKLDNN because NO_MKLDNN is set
+-- Using python found in E:\ws.local\Anaconda3\python.exe
+-- Using python found in E:\ws.local\Anaconda3\python.exe
+CMake Warning at CMakeLists.txt:347 (message):
+  Generated cmake files are only fully tested if one builds with system glog,
+  gflags, and protobuf.  Other settings may generate files that are not well
+  tested.
+
+
+--
+-- ******** Summary ********
+-- General:
+--   CMake version         : 3.12.0
+--   CMake command         : C:/Program Files/CMake/bin/cmake.exe
+--   Git version           : v0.1.11-10260-g126ac4b71-dirty
+--   System                : Windows
+--   C++ compiler          : C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.15.26726/bin/Hostx64/x64/cl.exe
+--   C++ compiler version  : 19.15.26726.0
+--   BLAS                  : MKL
+--   CXX flags             :         /wd4267 /wd4251 /wd4522 /wd4522 /wd4838 /wd4305 /wd4244 /wd4190 /wd4101 /wd4996 /wd4275 /EHa -openmp /MP /bigobj
+--   Build type            : Release
+--   Compile definitions   : ONNX_NAMESPACE=onnx_torch;NOMINMAX;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1
+--   CMAKE_PREFIX_PATH     :
+--   CMAKE_INSTALL_PREFIX  : E:/ws.dl/pytorch-scripts/pytorch/torch/lib/tmp_install
+--
+--   BUILD_ATEN_MOBILE     : OFF
+--   BUILD_BINARY          : OFF
+--   BUILD_CUSTOM_PROTOBUF : ON
+--     Link local protobuf : ON
+--   BUILD_DOCS            : OFF
+--   BUILD_PYTHON          : OFF
+--   BUILD_SHARED_LIBS     : ON
+--   BUILD_TEST            : OFF
+--   USE_ASAN              : OFF
+--   USE_CUDA              : 1
+--     CUDA static link    : OFF
+--     USE_CUDNN           : OFF
+--     CUDA version        : 9.2
+--     CUDA root directory : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2
+--     CUDA library        : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/cuda.lib
+--     cudart library      : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/cudart_static.lib
+--     cublas library      : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/cublas.lib;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/cublas_device.lib
+--     cufft library       : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/cufft.lib
+--     curand library      : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/curand.lib
+--     nvrtc               : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/lib/x64/nvrtc.lib
+--     CUDA include path   : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/include
+--     NVCC executable     : C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/bin/nvcc.exe
+--     CUDA host compiler  : C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.15.26726/bin/Hostx64/x64/cl.exe
+--     USE_TENSORRT        : OFF
+--   USE_ROCM              : OFF
+--   USE_EIGEN_FOR_BLAS    : ON
+--   USE_FFMPEG            : OFF
+--   USE_GFLAGS            : OFF
+--   USE_GLOG              : OFF
+--   USE_GLOO              : OFF
+--   USE_LEVELDB           : OFF
+--   USE_LITE_PROTO        : OFF
+--   USE_LMDB              : OFF
+--   USE_METAL             : OFF
+--   USE_MKL               :
+--   USE_MOBILE_OPENGL     : OFF
+--   USE_MPI               : OFF
+--   USE_NCCL              : OFF
+--   USE_NERVANA_GPU       : OFF
+--   USE_NNPACK            : OFF
+--   USE_OBSERVERS         : OFF
+--   USE_OPENCL            : OFF
+--   USE_OPENCV            : OFF
+--   USE_OPENMP            : OFF
+--   USE_PROF              : OFF
+--   USE_REDIS             : OFF
+--   USE_ROCKSDB           : OFF
+--   USE_ZMQ               : OFF
+--   USE_DISTRIBUTED       : OFF
+--   Public Dependencies  : Threads::Threads
+--   Private Dependencies : cpuinfo;onnxifi_loader
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/ws.dl/pytorch-scripts/pytorch/build

@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-05T11:42:55+08:00
+
+====== 星期三 05 9月 2018 ======
+
+====== EBox更新：流程状态显示最后发起的一条相关流程状态，包括已完成状态 ======
+{{.\pasted_image.png}}
+
+====== EBox更新：武汉项目专用，Job页面按单点登录的要求呼起大洋非编 ======
+配置要求：
+“基础配置”页面中增加一条配置
+key = es.ebox.3rdparty
+value = {
+"dyEdit":"notepad.exe",  大洋非编启动命令行
+"apiurl":"http://10.7.6.121:28080/editsphere/api"  大洋非编启动时所需访问的服务器地址，该地址应接受大洋非编传ticket完成登录
+}
+
+====== EBox fixup: 消除一些无用日志 ======

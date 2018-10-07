@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-29T10:00:39+08:00
+
+====== DirStat ======
+Created 星期六 29 九月 2018
+
+查看磁盘占用情况
+Windows版
+https://windirstat.net/
+
+Linux版
+https://github.com/shundhammer/qdirstat
+
+{{./pasted_image.png}}

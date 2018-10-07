@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-22T22:02:36+08:00
+
+====== 星期六 22 9月 2018 ======
+
+conda install pytorch torchvision -c pytorch  
+conda install -c caffe2 caffe2-cuda9.0-cudnn7
+conda install -c caffe2 pytorch-caffe2-cuda9.0-cudnn7     python=2.7
+
+

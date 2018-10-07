@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-21T10:35:11+08:00
+
+====== 星期五 21 9月 2018 ======
+
+C++的概率计算函数库
+
+https://github.com/kthohr/stats
+包含概率密度，分布计算，编译时计算
+A C++ header-only library of statistical distribution functions. https://www.kthohr.com/statslib.html
+
+https://github.com/Quanteeks/RandLib
+With RandLib one can easily work with probability distributions. One of the major advantages of this library (apart from being free and open-source) is that it doesn't require any additional packages. All you need is C++17 compiler support.
+What can you do with RandLib? Here are some useful examples:
+	Fast sampling. For instance, generate million variates from standard normal distribution:
+NormalRand X(0, 1);
+std::vector<double> data(1e6);
+X.Sample(data);
+
+
+[*] 下载 https://conda.anaconda.org/pytorch/linux-64/pytorch-0.4.1-py36_py35_py27__9.0.176_7.1.2_2.tar.bz2
+[*] TODO: download https://pan.baidu.com/s/1HJj8PEnv3SOu6ZxVpAHPXg <2018-09-21
+[*] 整理LINUX文件夹
+[*] 编译caffe2
+scripts/build_local.sh
+  CMAKE_ARGS+=("-DCMAKE_INSTALL_PREFIX=/media/tony/data/ep.install.caffe2")
+  CMAKE_ARGS+=("-DBUILD_PYTHON=OFF")
+  CMAKE_ARGS+=("-DUSE_CUDA=OFF")
+  CMAKE_ARGS+=("-DCMAKE_BUILD_TYPE=Debug")
+  CMAKE_ARGS+=("-DCMAKE_DEBUG_POSTFIX=d")
+[*] Qt for linux
+＝＝日志
+上午听李雪在做发送到内容库的功能，感到很担心，这个项目要被拿走的感觉
+不应该在环境配置问题上花过多时间，以后可以考虑在Linux中安装虚机做工作开发，或用MAC做工作开发

@@ -1,0 +1,78 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-21T13:57:30+08:00
+
+====== recognizer ======
+Created 星期五 21 九月 2018
+
+利用Falconn进行识别的参数配置
+{{{code: lang="cpp" linenumbers="True"
+// 搜索模块
+std::vector<int32_t> MainWindow::do_LSH_search(cv::Mat &img_color){
+    // Calculate cosine distance between query and data base faces
+    float query_feat[2048];
+    featExtractor->extractFeat(face_detector, point_detector, face_recognizer, img_color, dst_img, query_feat);
+
+    falconn::DenseVector<float> q = Eigen::VectorXf::Map(&query_feat[0], 2048);
+    q.normalize();
+
+    if(namesFeats.first.empty()){
+        featExtractor->loadFeaturesFilePair(namesFeats, path_namesFeats);
+        qDebug()<<"first loaded";
+
+        // LSH搜索方案
+        int numFeats = (int)namesFeats.first.size();
+        int dim = (int)namesFeats.second[0].size();
+
+        // Data set parameters
+        uint64_t seed = 119417657;
+
+        // Common LSH parameters
+        int num_tables = 8;
+        int num_setup_threads = 0;
+        StorageHashTable storage_hash_table = StorageHashTable::FlatHashTable;
+        DistanceFunction distance_function = DistanceFunction::NegativeInnerProduct;
+
+        // 转换数据类型
+        qDebug() << "Generating data set ...";
+        for (int ii = 0; ii < numFeats; ++ii) {
+            falconn::DenseVector<float> v = Eigen::VectorXf::Map(&namesFeats.second[ii][0], dim);
+            v.normalize(); // L2归一化
+            data.push_back(v);
+        }
+
+        // Cross polytope hashing
+        params_cp.dimension = dim;
+        params_cp.lsh_family = LSHFamily::CrossPolytope;
+        params_cp.distance_function = distance_function;
+        params_cp.storage_hash_table = storage_hash_table;
+        params_cp.k = 2; // 每个哈希表的哈希函数数目
+        params_cp.l = num_tables; // 哈希表数目
+        params_cp.last_cp_dimension = 2;
+        params_cp.num_rotations = 2;
+        params_cp.num_setup_threads = num_setup_threads;
+        params_cp.seed = seed ^ 833840234;
+        cptable = unique_ptr<falconn::LSHNearestNeighborTable<falconn::DenseVector<float>>>(std::move(construct_table<falconn::DenseVector<float>>(data, params_cp)));
+        cptable->set_num_probes(896);
+        qDebug() << "index build finished ...";
+
+    }
+
+    cptable->find_k_nearest_neighbors(q, numKNN, &idxCandidate); // LSH find the K nearest neighbors
+
+    // do reranking
+    std::vector<std::pair<float, size_t> > dists_idxs;
+    for (int i = 0 ; i < numReranking ; i++) {
+        float tmp_cosine_dist = q.dot(data[idxCandidate[i]]);
+        dists_idxs.push_back(std::make_pair(tmp_cosine_dist, idxCandidate[i]));
+    }
+
+    std::sort(dists_idxs.begin(), dists_idxs.end());
+    std::reverse(dists_idxs.begin(), dists_idxs.end());
+
+    for(int i = 0 ; i < numReranking ; i++){
+        idxCandidate.at(i) = (int32_t)dists_idxs[i].second;
+    }
+    return idxCandidate;
+}
+}}}

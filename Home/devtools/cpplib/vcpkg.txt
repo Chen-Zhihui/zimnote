@@ -6,7 +6,7 @@ Creation-Date: 2018-08-22T09:13:17+08:00
 Created 星期三 22 八月 2018
 
 
-[ ] cpplib pocoosp在vcpkg中编辑安装不正确 <2018-08-24
+[ ] cpplib pocoosp在vcpkg中编辑安装不正确 
 {{{code: lang="sh" linenumbers="True"
 E:\ws\vcpkg>vcpkg install pocoosp:x64-windows
 The following packages will be built and installed:

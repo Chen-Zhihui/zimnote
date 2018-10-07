@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-11T18:29:51+08:00
+
+====== 星期三 12 9月 2018 ======
+
+[*] 检查configJson.ebox_mount配置，是否都只是与挂盘逻辑有关
+[*] 把配置写到服务器上去，然后再传给配置文件
+专注一件事，高效

@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-03T09:44:50+08:00
+
+====== deep learning ======
+Created 星期一 03 九月 2018
+
+====== 框架 ======
+商业应用的算法，需要向第三方发布，所以要使用自研框架

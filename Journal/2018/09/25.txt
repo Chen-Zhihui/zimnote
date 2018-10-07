@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-23T09:46:32+08:00
+
+====== 星期二 25 9月 2018 ======
+
+TODO: conda install pytorch torchvision -c pytorch  
+TODO: https://pan.baidu.com/disk/home#/all?path=%2Fface&vmode=list sphere_model
+
+EXP: pytorch discuz https://discuss.pytorch.org/
+EXP: pytorch book https://github.com/chenyuntc/pytorch-book
+EXP: Insightface + Pytorch https://github.com/TreB1eN/InsightFace_Pytorch 调查清楚这个训练库用到的数据我现有模型用于复现 <2018-09-24 
+
+

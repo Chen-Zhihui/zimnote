@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-18T10:13:25+08:00
+
+====== 星期二 18 9月 2018 ======
+
+vcpkg install 
+	pybind11
+	eigen3
+	
+
+===== 第三方工程 =====
+pytorch/cmake/Dependencies.cmake中包含第三方工程的引用
+
+==== ONNX ====
+onnx在编译过程中需要调用python.exe，如果USE_Python=OFF，则编译失败。解决办法，-DPYTHON_EXECUTABLE=E:\ws.local\Anaconda3\python.exe 指定Python可执行程序
+
+remove 编译选项/WX
+
+==== protobuf ====
+
+==== cupinfo ====
+
+==== caffe2 ====
+[ ] caffe2d.dll, rather than caffe2.dll
+-DCMAKE_DEBUG_POSTFIX="d" 
+[ ] MT or DT
+  -DCAFFE2_USE_MSVC_STATIC_RUNTIME=OFF ^ use /MT
+
+编译成动态链接库时只有几个符号找不到，这个值得改一下
+Debug+dll 测试，看有哪些问题
+
+===== cmake =====
+有依赖关系的选项
+include(CMakeDependentOption)
+
+CMAKE_DEPENDENT_OPTION(USE_FOO "Use Foo" ON
+					   "USE_BAR;NOT USE_ZOT" OFF)
+
+
+===== todo =====
+[ ] vcpkg + caffe2 + cmake
+[ ] faceplay + cmake
+
+====== faceplay ======
+
+===== envs =====
+DIR_OPENCV=E:\ws.local\opencv\build
+
+[ ] 编译出错
+LNK1000: Internal error during CImplib::EmitThunk
+
+===== todo =====
+[ ] 验证编译出的caffe2，用protobuf重新编译，目前编译出来的不能用 <2018-09-19
+
+
+====== 日志 ======
+
+* 白雪岩发了一个转码软件，然后认别人测试，被孙伟回了，然后我安排周东浩和他一起测试，这次好像是感到压力了，直到又找了一台苹果机器把我以前发现的现象又重复了一遍，这次总算把这个事全部推给了转码。这个问题的最终解决要投放大量的工作量，目前从时间上看，我不能投放大量时间在这个上面，一定要推掉，不要向前。
+* 创新的博士做了一个人脸识别的模型，交给同事测试，同事应该还没找到思路，不知测试该从何入手，创新的博士可能只给了模型，没有给接口，这个就比较奇怪了，如果没有接口的话，检测人脸，对齐就没法做，这是要难为我们吗？是一个坑？也太不把部门间合作当一回事了。
+* 中介约晚上签字改合同，这个也比较奇怪，当开他写错了我的身份证号，我看出来了，这次他说写错了阿姨的名字，这出错机率有点大，要防一防，难道是要改下租约审请贷款，晚上把合同带回楼上去，与原合同对一下，合同可不是随便签的。不会这么明目张胆吧，看清再说，一定要和原合同对一下。如果不一样，重要事项要报警。
+* 电池无伤检测。给电池照CT，成像，用图像处理手段分析是否有缺陷。这是一个思路，针对未来的电动车。年初赵云松给的小照片背后可真是一大批同类需求，这可以在终端用户领域找需求来得快。
+
+
+
+
+
