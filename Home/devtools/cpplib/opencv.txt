@@ -16,7 +16,7 @@ opencv_contrib https://github.com/opencv/opencv_contrib
 [[+videoio]]
 
 
-[[+Qt]]
+Qt
 https://github.com/karlphillip/GraphicsProgramming
 
 [[+timing]]
@@ -77,7 +77,7 @@ annotation tool for opencv
 	datasets. Framework for working with different datasets
 	dnn_objdetect. DNN used for object detection
 	dpm. Deformable Part-based Models
-	[[+face]] . Face Analysis
+	* face . Face Analysis
 	freetype. Drawing UTF-8 strings with freetype/harfbuzz
 	fuzzy. Image processing based on fuzzy mathematics
 	hdf. Hierarchical Data Format I/O routines

@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-01T08:26:55+08:00
+
+====== cvn ======
+Created Saturday 01 September 2018
+
+cmake
+https://cmake.org/files/v3.12/cmake-3.12.1-Linux-x86_64.sh

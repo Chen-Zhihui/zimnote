@@ -38,7 +38,10 @@ smartgit
 tecplot
 uml
 understand
-vc
+
+
+===== vc =====
+
 https://www.visualstudio.com/zh-hans/downloads/
 提供最新的试用版 2017新版，工具很丰富
 
@@ -54,3 +57,7 @@ doxygen
 	OpenShot
 	MC
 
+
+====== ubuntu ======
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
