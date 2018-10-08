@@ -12,7 +12,7 @@ pip install mkl
 %comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 %windir%\System32\cmd.exe "/K" E:\ws.local\Anaconda3\Scripts\activate.bat E:\ws.local\Anaconda3
 
-[ ] 需手工安装mkl
+EXP: 需手工安装mkl
 
 %windir%\System32\cmd.exe "/K" E:\ws.local\Anaconda3\Scripts\activate.bat E:\ws.local\Anaconda3
 set PYTORCH_BUILD_VERSION=0.4.1

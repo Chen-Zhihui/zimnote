@@ -22,9 +22,9 @@ remove 编译选项/WX
 ==== cupinfo ====
 
 ==== caffe2 ====
-[ ] caffe2d.dll, rather than caffe2.dll
+EXP: caffe2d.dll, rather than caffe2.dll
 -DCMAKE_DEBUG_POSTFIX="d" 
-[ ] MT or DT
+EXP: MT or DT
   -DCAFFE2_USE_MSVC_STATIC_RUNTIME=OFF ^ use /MT
 
 编译成动态链接库时只有几个符号找不到，这个值得改一下
@@ -39,19 +39,19 @@ CMAKE_DEPENDENT_OPTION(USE_FOO "Use Foo" ON
 
 
 ===== todo =====
-[ ] vcpkg + caffe2 + cmake
-[ ] faceplay + cmake
+TODO: vcpkg + caffe2 + cmake
+
 
 ====== faceplay ======
 
 ===== envs =====
 DIR_OPENCV=E:\ws.local\opencv\build
 
-[ ] 编译出错
+[x] 编译出错
 LNK1000: Internal error during CImplib::EmitThunk
 
 ===== todo =====
-[ ] 验证编译出的caffe2，用protobuf重新编译，目前编译出来的不能用 <2018-09-19
+[x] 验证编译出的caffe2，用protobuf重新编译，目前编译出来的不能用 <2018-09-19
 
 
 ====== 日志 ======

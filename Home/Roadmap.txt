@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-08T19:54:06+08:00
+
+====== Roadmap ======
+Created 星期一 08 十月 2018
+
+===== 处理流程 =====
+[ ] 事务标签系统  <2018-01-01
+	* ALG: 算法，普通算法和ML算法
+	* EXP: 经验，这些内容要收录到知识库中去，写成手册
+	* FIXME:
+	* TODO: 拟做的事情
+	* DS: dataset 
+	* PLN: plan 
+	* OUTLET: 事务分类系统
+	* DAILY: 每天积累
+
+===== 事务规划 =====
+[ ] OUTLET: 事务分类系统，这是主线RoadMap，每条线收到一个文档中 <2018-01-02
+	[ ] roadmap @roadmap
+	[ ] cv @cv
+	[ ] face @face
+	[ ] dl @dl
+	[ ] ebox @ebox
+	[ ] education @edu 
+OUTLET: 记事软件的改进之处
+	[ ] 把一个页面中的事项集中展示
+
+====== 总结发展的逻辑 ======
+
+
+====== 计算机视觉 ======
+ [[:Home:projects:face]] 
+
+====== 深度学习 ======
+
+===== 用pytorch做算法 =====
+
+torch训练算法，ignite，visdom。 目前掌握的信息ignite是比较好的，简单有效。可以写脚本复现一些算法。再加上参数文件就更好了，用参数文件控制不同的实验，这些参数控制优化，学习率，损失等因素，这个可以一边实验一边设计参数文件，参考caffe2中的方式
+
+===== caffe2做应用 =====
+[ ] caffe2
+	[ ] caffe2开发环境。 conda install -c conda-forge onnx-caffe2
+	[ ] caffe2编译。 
+		* Windows支持不够好，通过定制可以编译，有关动态链接和动态链接的处理有问题，目前代码中至少有三个编译脚本，应该分一下只取一个
+		* setup.py中调用一个脚本，这个比较可信，至少曾经编译过
+		* setup_caffe2.py中调用一个
+		* build_windows.bat也是一个 https://caffe2.ai/docs/getting-started.html?platform=windows&configuration=compile
+		[ ] Android，放后面
+		[ ] Linux
+		[ ] Windows 目前急需的是这一个，利用vcpkg提供第三方库，或是把pytorch代码直接引入到vcpkg中就更好了
+	[ ] 导入导出模型，有完整教程
+		[ ] 可以把onnx到caffe2模型转换的过程标准化，做成脚本随时用
+		* 不同框架模型的相互转换
+		* https://github.com/Microsoft/MMdnn
+		* 转换成caffe2模型，通过ONNX模型转换，所有支持ONNX的模型，都可以用于caffe2
+		https://pytorch.org/tutorials/advanced/super_resolution_with_caffe2.html
+		* caffe2可以导入什么类型的模型文件？
+
+====== 教育 ======
+[[:Home:projects:card]]
+
+
+

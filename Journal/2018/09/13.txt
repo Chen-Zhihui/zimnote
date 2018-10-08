@@ -6,10 +6,10 @@ Creation-Date: 2018-09-12T22:18:07+08:00
 
 [*] 上午给邓俊更新一个普通版本，去掉一些菜单
 [*] 给天津更新一个新版本，用给南京准备的版本，去掉所有可能删除目标的操作，只保留删文件和空文件夹，让天津测试
-[ ] torch的训练工具
-	[ ] template
-	[ ] https://github.com/ecs-vlc/torchbearer
-	[ ] https://github.com/pytorch/ignite  把训练过程分解为训练，epoch，batch三种，共六个事件，在这些事件中可以注册回调函数，记录当前的状态
+EXP: torch的训练工具
+	[*] template
+	[*] https://github.com/ecs-vlc/torchbearer
+	[*] https://github.com/pytorch/ignite  把训练过程分解为训练，epoch，batch三种，共六个事件，在这些事件中可以注册回调函数，记录当前的状态
 			https://pytorch.org/ignite/quickstart.html#explanation 
 {{{code: lang="python" linenumbers="True"
     def _run_once_on_dataset(self):
@@ -35,4 +35,4 @@ Creation-Date: 2018-09-12T22:18:07+08:00
         engine.add_event_handler(Events.EPOCH_COMPLETED, self.completed, name)
 }}}
 			
-	[ ] https://github.com/facebookresearch/visdom
+EXP: https://github.com/facebookresearch/visdom

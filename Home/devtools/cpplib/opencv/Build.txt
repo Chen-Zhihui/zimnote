@@ -5,11 +5,11 @@ Creation-Date: 2018-08-25T11:02:59+08:00
 ====== Build ======
 Created 星期六 25 八月 2018
 
-[ ] todo: 编译openCV tidy this page while build opencv and contrib <2018-08-28
-	[ ] 参考 https://www.learnopencv.com/install-opencv3-on-windows/
-	[ ] 下载代码包，不要下载git
-	[ ] 编译额外模块的方法 https://github.com/opencv/opencv_contrib
-	[ ] 在Windows上重新编译opencv，记录一个cmake的脚本
+[*] todo: 编译openCV tidy this page while build opencv and contrib <2018-08-28
+	[*] 参考 https://www.learnopencv.com/install-opencv3-on-windows/
+	[*] 下载代码包，不要下载git
+	[*] 编译额外模块的方法 https://github.com/opencv/opencv_contrib
+	[*] 在Windows上重新编译opencv，记录一个cmake的脚本
 
 cmake
 BUILD_JAVA=OFF

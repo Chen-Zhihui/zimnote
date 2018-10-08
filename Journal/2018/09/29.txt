@@ -4,4 +4,4 @@ Creation-Date: 2018-09-28T18:33:31+08:00
 
 ====== 星期六 29 9月 2018 ======
 
-[ ] try openshot
+[x] try openshot

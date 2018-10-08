@@ -13,4 +13,4 @@ Found PythonLibs: C:/Users/tony/Anaconda3/libs/python36.lib (found suitable exac
 
 已修改在git中，保证可编译
 
-[ ] 整理CTK的fix，推上去  E:\ws.cv\CTK
+EXT: 整理CTK的fix，推上去  E:\ws.cv\CTK

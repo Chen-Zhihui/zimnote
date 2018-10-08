@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-08T18:43:16+08:00
+
+====== vcpkg ======
+Created 星期一 08 十月 2018
+
+* jsoncpp
+The package jsoncpp:x64-windows provides CMake targets:
+	find_package(jsoncpp CONFIG REQUIRED)
+	target_link_libraries(main PRIVATE jsoncpp_lib)

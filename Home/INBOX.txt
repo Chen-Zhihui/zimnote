@@ -34,15 +34,15 @@ DL
 
 ===== Qt =====
 
-[ ] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup 
+[*] 必要：参考Skycoder42提供的例子，写一些脚本，完成自动打包，参考QtIFW-Advanced-Setup 
 
 
 ===== opencv =====
-[ ] 把github上有关dlib和opencv的项目列个表， github.search(dlib)
-[ ] opencv模块列表
-[ ] opencv和VS插件，可以查看中间结果的
-[ ] opencv和Qt
-[ ] 调查QT与opencv的结合方式，看能否直接在QT中用opencv
+把github上有关dlib和opencv的项目列个表， github.search(dlib)
+opencv模块列表
+opencv和VS插件，可以查看中间结果的
+opencv和Qt
+调查QT与opencv的结合方式，看能否直接在QT中用opencv
 
 
 ===== Brain =====
@@ -65,3 +65,9 @@ http://www.openzim.org/wiki/OpenZIM
 https://github.com/kiwix
 https://github.com/kiwix/kiwix-desktop
 https://github.com/kiwix/kiwix-lib
+
+====== NPL ======
+
+===== kiwix的桌面应用 =====
+[ ] 在Linux上编译这个应用kiwix，这个可以做为自然语言处理和知识图谱的开端，以这个库带的文本处理和索引为基础，入手自然语言处理
+

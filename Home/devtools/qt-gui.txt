@@ -65,7 +65,7 @@ else: include($$OUT_PWD/qpmx_generated.pri)
 
 ===== linuxdeployqt =====
 https://github.com/probonopd/linuxdeployqt
-[ ] 尝试：Linux下qt安装包制作
+[*] 尝试：Linux下qt安装包制作
 
 ===== update =====
 https://github.com/Skycoder42/QtAutoUpdater
@@ -180,7 +180,6 @@ JsonListModel https://github.com/Cutehacks/gel
 编译太复杂，Windows自编译过程中有失败，自编译不稳定
 
 * openshot
-[ ] todo 
 
 * MTL & shotcut
 

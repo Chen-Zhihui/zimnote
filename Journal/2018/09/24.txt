@@ -4,5 +4,5 @@ Creation-Date: 2018-09-23T21:52:17+08:00
 
 ====== 星期一 24 9月 2018 ======
 
-[ ] mtcnn+caffe2+sample
-[ ] sphereface+caffe2+sample
+[x] mtcnn+caffe2+sample
+[x] sphereface+caffe2+sample
