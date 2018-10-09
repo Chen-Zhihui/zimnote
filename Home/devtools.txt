@@ -11,7 +11,7 @@ Created 星期五 17 八月 2018
 [[+viz-2d]]
 [[+qt-gui]]
 [[+cpplib]]
-[[+vs]]
+[[+toolchain:vs]]
 [[+cloud_app]]
 [[+cvn]]
 

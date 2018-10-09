@@ -6,16 +6,22 @@ Creation-Date: 2018-09-26T15:15:06+08:00
 Created 星期三 26 九月 2018
 
 每个动态链接库都可以指定一个安装路径，当然不能用绝对路径，所以采用以下三种形式
+{{{code: lang="cpp" linenumbers="True"
 @rpath
 @executable_path 
 @loader_path 
+}}}
+
 http://www.cnblogs.com/csuftzzk/p/paths_in_mac_osx.html
 这个安装路径是记录在动态库中的，在链接时这个记录会__复制到下游动态库__中。
 下游动态库在运行时分别展开为相应的路径，第一种最灵活，加载器可以从多个路径中选择。
 
 1 install_name_tool 修改动态库的ID，例如
+{{{code: lang="cpp" linenumbers="True"
 install_name_tool -id @rpath/mylib.dylilb  mylib.dylib  改本动态库的安装路径
 install_name_tool -change @loader_path/mylib.dylib @rpath/mylib.dylib mylib.dylib 改本动态库引用的动态库的查找路径
+}}}
+
 
 2 otool查看动态库的参数
 id, install_name_tool -id,  otool -D

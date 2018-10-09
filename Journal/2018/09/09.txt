@@ -20,7 +20,7 @@ if you want to know what exactly is coming from conda, look at the conda listing
 	https://anaconda.org/soumith
 	https://anaconda.org/peterjc123
 	https://anaconda.org/anaconda/pytorch
-@djangoma why do you need 0.2 on windows? There should be plenty of posts about how to upgrade your code and you can just run on current pytorch. If you really need 0.2 on windows, you can use either docker or WSL but you wouldn't get GPU support.
+why do you need 0.2 on windows? There should be plenty of posts about how to upgrade your code and you can just run on current pytorch. If you really need 0.2 on windows, you can use either docker or WSL but you wouldn't get GPU support.
 
 EXP: 从Anaconda cloud上找最新的安装包，比如pytorch
 conda install -c caffe2 pytorch-caffe2-cuda9.0-cudnn7 

@@ -10,20 +10,7 @@ target
 
 ====== VS Code ======
 
-====== VS 2017 ======
-https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/
-https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/
-https://blogs.msdn.microsoft.com/vcblog/2016/11/16/cmake-support-in-visual-studio-the-visual-studio-2017-rc-update/
 
-环境变量的支持和宏指令： CMakeSettings.json支持对任意一种配置特性使用环境变量。使用语法${env.FOO} 来扩展环境变量%FOO%。
-可以在这个文件中访问内置宏:
-	${workspaceRoot}-提供工作空间文件夹的全部路径
-	${workspaceRoot}-哈希工作空间路径；对当前的工作空间创建一个唯一的标识符是非常有用的（例如在文件夹路径中使用）
-	${projectFile}-CMakeLists.txt根目录的完整路径
-	${projectDir}- CMakeLists.txt根目录文件夹的完整路径
-	${thisFile}-CMakeLists.txt文件的完整路径
-	${name}-配置的名称
-	${generator}-此配置中使用CMake 生成器的名称
 
 
 ====== CMAKE ======

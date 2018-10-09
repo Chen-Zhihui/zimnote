@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-09T21:34:08+08:00
+
+====== course ======
+Created Tuesday 09 October 2018
+
+[ ] PLN: deep learning and cv <2018-10-12
+[ ] PLN: 针对吴恩达的课程及书，写一个提纲
+[ ] PLN: 针对视觉，机器学习，西瓜书，十大算法书，写一个提纲
+
