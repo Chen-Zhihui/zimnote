@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-09T14:06:20+08:00
+
+====== ffmpeg ======
+Created 星期二 09 十月 2018
+
+[总结]FFMPEG视音频编解码零基础学习方法
+https://blog.csdn.net/leixiaohua1020/article/details/15811977
+
+
+
+https://kodi.tv/ 媒体中心
+
+
+{{.\pasted_image.png}}

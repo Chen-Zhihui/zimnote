@@ -4,8 +4,61 @@ Creation-Date: 2018-10-08T18:43:16+08:00
 
 ====== vcpkg ======
 Created 星期一 08 十月 2018
+https://github.com/Microsoft/vcpkg
+https://vcpkg.readthedocs.io/en/latest/
+cmake -DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake
+{{{code: lang="js" linenumbers="True"
+{
+  "configurations": [{
+    "name": "x86-Debug",
+    "generator": "Visual Studio 15 2017",
+    "configurationType" : "Debug",
+    "buildRoot":  "${env.LOCALAPPDATA}\\CMakeBuild\\${workspaceHash}\\build\\${name}",
+    "cmakeCommandArgs": "",
+    "buildCommandArgs": "-m -v:minimal",
+    "variables": [{
+      "name": "CMAKE_TOOLCHAIN_FILE",
+      "value": "D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+    }]
+  }]
+}
+}}}
 
-* jsoncpp
+
+
+====== packages ======
+
+EXP: cpplib pocoosp在vcpkg中编辑安装不正确 
+{{{code: lang="sh" linenumbers="True"
+E:\ws\vcpkg>vcpkg install pocoosp:x64-windows
+The following packages will be built and installed:
+    pocoosp[core]:x64-windows
+Starting package 1/1: pocoosp:x64-windows
+Building package pocoosp[core]:x64-windows...
+-- Using cached E:/ws/vcpkg/downloads/onlyosp-1.9.0.tar.gz
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+CMake Error at scripts/cmake/vcpkg_fixup_cmake_targets.cmake:42 (message):
+  'E:/ws/vcpkg/packages/pocoosp_x64-windows/debug/lib/cmake' does not exist.
+Call Stack (most recent call first):
+  ports/pocoosp/portfile.cmake:37 (vcpkg_fixup_cmake_targets)
+  scripts/ports.cmake:71 (include)
+
+
+Error: Building package pocoosp:x64-windows failed with: BUILD_FAILED
+Please ensure you're using the latest portfiles with `.\vcpkg update`, then
+submit an issue at https://github.com/Microsoft/vcpkg/issues including:
+  Package: pocoosp:x64-windows
+  Vcpkg version: 0.0.113-nohash
+
+Additionally, attach any relevant sections from the log files above.
+}}}
+
+
+EXP: jsoncpp
 The package jsoncpp:x64-windows provides CMake targets:
 	find_package(jsoncpp CONFIG REQUIRED)
 	target_link_libraries(main PRIVATE jsoncpp_lib)
+
+

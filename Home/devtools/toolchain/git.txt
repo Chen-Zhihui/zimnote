@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-09T13:19:11+08:00
+
+====== git ======
+Created 星期二 09 十月 2018
+
+下载git库的目录，而不是全部代码
+https://kinolien.github.io/gitzip/

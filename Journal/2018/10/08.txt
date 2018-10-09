@@ -8,20 +8,29 @@ Creation-Date: 2018-09-30T16:51:01+08:00
 * 合并master与jsjbdisk
 * 在windows上编译openshot，编译过程中对代码有改动，可能影响了功能，目前处于不可用状态，这个代码从依赖关系看，可以能用到不同的平台，包括手机，还是值得用一下的
 
-
-
 ====== 周目标 ======
 
 [ ] 把jsjbdisk合并到主分枝上来，以后只用主分枝
 [ ] 有JSONListModel做数据，另外做表格控件，好像不必要，直接listmodel，加排序就行了
 [ ] 写一个有关cmake的使用办法，翻译 https://cliutils.gitlab.io/modern-cmake/chapters/install/exporting.html
 [ ] 播放器框架，从QtAV和openshot中二选一，后者依赖关系明确做为优先对象S
+	[*] openshot编译，可播放
+	[ ] QtAV编译，分析结构
 
 ===== openshot =====
-	依赖 ffmpeg, zeromq, qt，openmp
-	优先用vcpkg解决依赖关系
-	list(APPEND CMAKE_MODULE_PATH ${ZeorMQ_DIR} ${FFMPEG_DIR})
-	set(ENABLE_PYTHON OFF)
-	编译完成，但运行出错，似乎是ffmpeg的组件缺失
-[ ] 在LINUX下编译试一下效果，看播放效果，占CPU情况
-[ ] build openshot with vcpkg support on linux，目标是追踪下播放器的实现逻辑
+EXP: openshot做为播放器使用，代码归档在ws_mm中，要进一步归档到vcpkg中？
+* 依赖 ffmpeg, zeromq, qt，openmp, jsoncpp. 可以做基本的播放操作
+* 先编译libopenshot-audio
+* 用vcpkg解决依赖关系，并对cmake文件进行了修改
+	* 需要定义的环境变量
+	* FFMPEGDIR=E:\ws.local\ffmpeg-4.02-win
+	* LIBOPENSHOT_AUDIO_DIR=E:\ws.mm\libopenshot.install
+	* 其他配置写入CMakeSettings.json中
+	* 代码中有一段日志输出到文件的功能
+* 播放器有关的线程一共四个Player, VideoCacheThread, VideoPlayBack, AudioPlayBack，多线程的处理中可能存在问题，不稳定。
+* 目前可以用这个库学习播放器的逻辑，这个库也不稳定，例子过于简单，易崩溃
+* EXP: zmq做为日志库使用
+* EXP: 播放器逻辑
+
+===== QtAV =====
+[ ] ffmpeg的编译和使用，特别是相关的几个库，目前vcpkg是不支持ffmpeg[x264]的，应该是版本不对应，需要另想办法

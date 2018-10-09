@@ -7,13 +7,13 @@ Created 星期六 29 九月 2018
 
 ====== git ======
 
-下载git库的目录，而不是全部代码
-https://kinolien.github.io/gitzip/
+[[+git]] 
+
 
 
 ====== cmake ======
 [[+cmake]]
-[[+openmp]]
+[[cpplib:openmp]]
 
 
 ====== qtcreator ======

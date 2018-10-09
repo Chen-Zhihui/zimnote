@@ -182,6 +182,7 @@ JsonListModel https://github.com/Cutehacks/gel
 * openshot
 
 * MTL & shotcut
+[[cpplib:ffmpeg]]
 
 ====== CV ======
 
