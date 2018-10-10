@@ -6,24 +6,33 @@ Creation-Date: 2018-10-10T09:06:52+08:00
 
 ====== 当前状态 ======
 
-qmake编译出的可执行程序播放无误，cmake编译出的有问题，怀疑是声音处理有有问题，有些功能可能没有编译进来，播放无声音视频OK
+TODO: qmake编译出的可执行程序播放无误，cmake编译出的有问题，怀疑是声音处理有问题，有些功能可能没有编译进来，播放无声音视频OK
+[ ] cmake_debug_postfix + install
+[ ] 调查下引用的第三方库都起什么作用
+[ ] audio output with cmake
+[ ] 如何接过滤器从中截取图像
 
-FFMPEG
+====== QtAV ======
+
+EXP: deploy windeployqt.exe --debug Player.exe -opengl
+EXP: export windeployqt.exe  export PATH=$PATH:/c/Qt/Qt5.11.0/5.11.0/msvc2017_64/bin
+
+===== qmake =====
+
 .qmake.conf
 FFDIR=E:/ws.local/ffmpeg-4.02-win
 INCLUDEPATH += $$FFDIR/include
 LIBS += -L$$FFDIR/lib
 
-
-		{
-		  "name": "EXTRA_INCLUDE",
-		  "value": "${env.VCPKGDIR}\\installed\\x64-windows\\include"
-		}
-
+===== vcpkg + vs =====
+见代码
+{
+  "name": "EXTRA_INCLUDE",
+  "value": "${env.VCPKGDIR}\\installed\\x64-windows\\include"
+}
 
 ===== cmake =====
 		check_library_exists(portaudio Pa_Initialize "" HAVE_PORTAUDIO)
-		
 		check_library_exists(OpenSLES slCreateEngine "" HAVE_OPENSL)
 		check_library_exists(va vaInitialize "" HAVE_VAAPI)
 		check_library_exists(pulse pa_threaded_mainloop_new "" HAVE_PULSE)
@@ -43,8 +52,4 @@ support on android?
 https://github.com/WritingMinds/ffmpeg-android
 
 EXP: ffmpeg with vcpkg vcpkg install ffmpeg[x264,nonfree,lzma,gpl,openssl,opencl]:x64-windows
-
-====== QtAV ======
-EXP: deploy windeployqt.exe --debug Player.exe -opengl
-EXP: export windeployqt.exe  export PATH=$PATH:/c/Qt/Qt5.11.0/5.11.0/msvc2017_64/bin
 
