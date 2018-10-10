@@ -62,3 +62,9 @@ The package jsoncpp:x64-windows provides CMake targets:
 	target_link_libraries(main PRIVATE jsoncpp_lib)
 
 
+===== vcpkg-cmake-wrapper.cmake =====
+macro(find_package name)
+	string(TOLOWER "${name}" _vcpkg_lowercase_name)
+	if(EXISTS "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/${_vcpkg_lowercase_name}/vcpkg-cmake-wrapper.cmake")
+		set(ARGS "${ARGV}")
+		include(${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/${_vcpkg_lowercase_name}/vcpkg-cmake-wrapper.cmake)

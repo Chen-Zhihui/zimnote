@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-10T16:31:16+08:00
+
+====== variables ======
+Created 星期三 10 十月 2018
+
+
+		{
+		  "name": "Qt5Multimedia_DIR",
+		  "value": "${env.QTDIR}\\lib\\cmake\\Qt5Multimedia"
+		},
+		{
+		  "name": "Qt5MultimediaWidgets_DIR",
+		  "value": "${env.QTDIR}\\lib\\cmake\\Qt5MultimediaWidgets"
+		},

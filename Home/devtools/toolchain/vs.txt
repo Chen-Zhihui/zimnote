@@ -36,3 +36,7 @@ https://blogs.msdn.microsoft.com/vcblog/2016/11/16/cmake-support-in-visual-studi
 	${thisFile}-CMakeLists.txt文件的完整路径
 	${name}-配置的名称
 	${generator}-此配置中使用CMake 生成器的名称
+	
+[[+variables]]
+
+

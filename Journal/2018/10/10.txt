@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-10T09:06:52+08:00
+
+====== 星期三 10 10月 2018 ======
+
+====== 当前状态 ======
+
+qmake编译出的可执行程序播放无误，cmake编译出的有问题，怀疑是声音处理有有问题，有些功能可能没有编译进来，播放无声音视频OK
+
+FFMPEG
+.qmake.conf
+FFDIR=E:/ws.local/ffmpeg-4.02-win
+INCLUDEPATH += $$FFDIR/include
+LIBS += -L$$FFDIR/lib
+
+
+		{
+		  "name": "EXTRA_INCLUDE",
+		  "value": "${env.VCPKGDIR}\\installed\\x64-windows\\include"
+		}
+
+
+===== cmake =====
+		check_library_exists(portaudio Pa_Initialize "" HAVE_PORTAUDIO)
+		
+		check_library_exists(OpenSLES slCreateEngine "" HAVE_OPENSL)
+		check_library_exists(va vaInitialize "" HAVE_VAAPI)
+		check_library_exists(pulse pa_threaded_mainloop_new "" HAVE_PULSE)
+
+
+====== FFMPEG ======
+ffmpeg on vcpkg Version: 3.3.3-5 时间2017-7
+use x264 commit=303c484ec828ed0d8bfe743500e70314d026c3bd, 时间是2018-7-18
+初步判断是x264版本高于ffmpeg，导致vcpkg中编译ffmpeg[x264]失败
+
+一般的编译运行是可以的，但偶尔会有崩溃的问题
+
+use qt player with ffmpeg plugin
+https://github.com/cedrix57/QMediaLearner
+
+support on android? 
+https://github.com/WritingMinds/ffmpeg-android
+
+EXP: ffmpeg with vcpkg vcpkg install ffmpeg[x264,nonfree,lzma,gpl,openssl,opencl]:x64-windows
+
+====== QtAV ======
+EXP: deploy windeployqt.exe --debug Player.exe -opengl
+EXP: export windeployqt.exe  export PATH=$PATH:/c/Qt/Qt5.11.0/5.11.0/msvc2017_64/bin
+

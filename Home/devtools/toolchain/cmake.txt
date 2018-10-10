@@ -8,9 +8,13 @@ Created 星期四 23 八月 2018
 generator
 target
 
-====== VS Code ======
-
-
+===== check_c_source_compiles =====
+  check_c_source_compiles(
+	"#include <libavcodec/videotoolbox.h>
+	int main() {
+		av_videotoolbox_alloc_context();
+		return 0;
+	}" HAVE_VIDEOTOOLBOX)
 
 
 ====== CMAKE ======
