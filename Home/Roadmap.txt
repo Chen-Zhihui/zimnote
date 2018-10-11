@@ -20,6 +20,7 @@ FIXME, TODO, EXP, ALG, DS, PLN, TRY, TDO, TOZ, PSS, DRP, OUTLET, DAILY, DLY, FXM
 	[ ] 行动（如何处理）
 		[ ] LRN: learn
 		[ ] TDO: 要做的事情
+		[ ] KEY: 当前要做的事，关键事项
 		[ ] DLY: 每天积累
 		[ ] FXM: 紧急
 	[ ] 物件（只有做的内容才会有成果）价值标签
@@ -34,6 +35,7 @@ FIXME, TODO, EXP, ALG, DS, PLN, TRY, TDO, TOZ, PSS, DRP, OUTLET, DAILY, DLY, FXM
 			[ ] #M 
 			[ ] #S
 		[ ] VL: value，关键路径节点
+		[ ] CORE: 核心要素
 		[ ] MND：重要思路
 		[ ] FUT：关于未来的想法
 	[ ] GTD system
