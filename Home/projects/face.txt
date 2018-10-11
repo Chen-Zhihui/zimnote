@@ -210,5 +210,5 @@ Insightface集中了多个数据集，并提供了百度网盘的下载，格式
 [*] casia-webface
 [x] glint-all
 [*] glint-asia
-
+FXM: 检查下当前已有哪些数据 <2018-10-12
 Insightface_pytorch，把insightface的数据格式，转换成普通的文件格式
