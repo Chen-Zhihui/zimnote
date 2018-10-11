@@ -151,13 +151,13 @@ https://github.com/Buschtrommel/Anagiwahst
 ===== QtnProperty =====
 https://github.com/lexxmark/QtnProperty
 一个属性框架，在框架基础上定义了属性定义文件，生成相应的代码，可编译到软件中
-[ ] 尝试：在QtnProperty基础上增加导入导出JSON的功能，就可以用做工程开发。后台逻辑<-->Json<-->QtnProperty三者之间连接起来。后台逻辑用的是一组复制参数，前台界面显示的是一组简单参数，用Poco的Layer合并在一起
+VL：在QtnProperty基础上增加导入导出JSON的功能，就可以用做工程开发。后台逻辑<-->Json<-->QtnProperty三者之间连接起来。后台逻辑用的是一组复制参数，前台界面显示的是一组简单参数，用Poco的Layer合并在一起
 
 ====== Template ======
 
 ===== Grantlee =====
-[ ] 尝试：在文本编辑器中编辑带有标记的文本，然后将标记生成相应的数据，用于不同界面的显示，实现一个类似于wiki编辑器的工具，以回车做分割符，每段做一个单独的处理，编辑只编辑当前一段，其他段落都是根据相应的模板生成出来的，做成一个NLP的标注工具
-[ ] 尝试：写一个json文件，记录参数的全部详细信息，然后用模板处理一下，生成一些C++代码
+UTL: 尝试：在文本编辑器中编辑带有标记的文本，然后将标记生成相应的数据，用于不同界面的显示，实现一个类似于wiki编辑器的工具，以回车做分割符，每段做一个单独的处理，编辑只编辑当前一段，其他段落都是根据相应的模板生成出来的，做成一个NLP的标注工具
+UTL：写一个json文件，记录参数的全部详细信息，然后用模板处理一下，生成一些C++代码
 The goal of Grantlee Templates is to make it easier for application developers to separate the structure of documents from the data they contain, opening the door for theming and advanced generation of other text such as code. The syntax uses the syntax of the Django template system, and the core design of Django is reused in Grantlee.
 {{{code: lang="html" linenumbers="True"
 <ul>
@@ -201,7 +201,7 @@ https://github.com/dbzhang800/QtOpenCV
 ===== file util =====
 * manipulate file like shell
 https://github.com/benlau/qtshell
-[ ] 有益: 变成QML的插件
+UTL: 有益: 变成QML的插件
 
 
 ====== Resource ======

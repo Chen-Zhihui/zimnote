@@ -39,7 +39,7 @@ CMAKE_DEPENDENT_OPTION(USE_FOO "Use Foo" ON
 
 
 ===== todo =====
-TODO: vcpkg + caffe2 + cmake
+TDO: vcpkg + caffe2 + cmake
 
 
 ====== faceplay ======

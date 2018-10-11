@@ -107,9 +107,14 @@ APP: License-Plate https://github.com/zhubenfu/License-Plate-Detect-Recognition-
 ==== 应用软件基础设施 ====
 	* Poco的插件系统
 	* MITK的显示框架
-	* Mvvc的应用框架
+	* CTK
+	* ASAP
 
 ==== 专用功能 ====
+
+=== 视频处理框架 ===
+* MTL
+* twitter的框架
 
 === 播放器 ===
 	* Qt的播放器不好用了，直接不播，依赖于操作系统本身的编解码器
@@ -118,6 +123,7 @@ APP: License-Plate https://github.com/zhubenfu/License-Plate-Detect-Recognition-
 		* 但是编解码器的效率直接影响播放效果，速度
 	* 避开这个问题，做成一个图片识别工具，不要处理视频
 		* 避开计算量问题
+		* 已有解决方案，而且比较好用QTAV, libopenshot, mtl, shotcut, QtMultiMedia
 
 === 相机 ===
 目前可以不处理相机的方位问题

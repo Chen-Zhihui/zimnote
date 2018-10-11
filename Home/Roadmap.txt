@@ -6,21 +6,38 @@ Creation-Date: 2018-10-08T19:54:06+08:00
 Created 星期一 08 十月 2018
 
 ===== 处理流程 =====
+{{{code: lang="js" linenumbers="True"
+FIXME, TODO, EXP, ALG, DS, PLN, TRY, TDO, TOZ, PSS, DRP, OUTLET, DAILY, DLY, FXM, BK, RD, IDEA, APP, VL, LRN, UTL, MND, FUT
+}}}
+
 [ ] 事务标签系统  <2018-01-01
-	* ALG: 算法，普通算法和ML算法
-	* EXP: 经验，这些内容要收录到知识库中去，写成手册
-	* TOZ: move to zotero
-	* FIXME:
-	* TODO: 拟做的事情
-	* DS: dataset 
-	* PLN: plan 
-	* OUTLET: 事务分类系统
-	* DAILY: 每天积累
-	* BK: book
-	* RD: research and development
-	* IDEA: idea
-	* APP: application
-	* VL: value
+	[ ] 计划
+		[ ] PLN: plan, inbox
+		[ ] TRY: 可做可不做
+		[ ] TOZ: 做好之后整理move to zotero
+		[ ] PSS: 先略过，以后考虑做不做
+		[ ] DRP: 放弃
+	[ ] 行动（如何处理）
+		[ ] LRN: learn
+		[ ] TDO: 要做的事情
+		[ ] DLY: 每天积累
+		[ ] FXM: 紧急
+	[ ] 物件（只有做的内容才会有成果）价值标签
+		[ ] ALG: 算法，普通算法和ML算法
+		[ ] EXP: 经验，这些内容要收录到知识库中去，写成手册
+		[ ] DS: dataset 
+		[ ] BK: book
+		[ ] IDEA: idea
+		[ ] APP: application
+		[ ] UTL: util， 有点用，但没有太大用途 
+			[ ] #B 
+			[ ] #M 
+			[ ] #S
+		[ ] VL: value，关键路径节点
+		[ ] MND：重要思路
+		[ ] FUT：关于未来的想法
+	[ ] GTD system
+		[ ] OUTLET: 事务分类系统
 
 ===== 事务规划 =====
 [ ] OUTLET: 事务分类系统，这是主线RoadMap，每条线收到一个文档中 <2018-01-02
@@ -38,10 +55,11 @@ OUTLET: 记事软件的改进之处
 
 ====== 计算机视觉 ======
  [[:Home:projects:face]] 
-[ ] PLN:  人脸识别技术 @face
-	[ ] 演示环境
-	[ ] 算法展示
-	[ ] 模型训练
+
+===== 人脸识别技术 @face =====
+* 演示环境
+* 算法展示
+* 模型训练，理论学习
 
 ====== 深度学习 ======
 

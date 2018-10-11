@@ -5,6 +5,122 @@ Creation-Date: 2018-08-23T10:50:33+08:00
 ====== CMakeSettings.json ======
 Created 星期四 23 八月 2018
 
+===== settings in use =====
+{{{code: lang="js" linenumbers="True"
+{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [
+        "msvc_x64_x64"
+      ],
+      "buildRoot": "${env.MYSPACE}\\QtAV\\${name}",
+      "installRoot": "${env.MYSPACE}\\QtAV\\install",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_TOOLCHAIN_FILE",
+          "value": "${env.VCPKGDIR}\\scripts\\buildsystems\\vcpkg.cmake"
+        },
+        {
+          "name": "CMAKE_MODULE_PATH",
+          "value": "${env.VCPKGDIR}\\installed\\x64-windows\\share\\ffmpeg"
+        },
+        {
+          "name": "Qt5_DIR",
+          "value": "${env.QTDIR}"
+        },
+        {
+          "name": "Qt5Core_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Core"
+        },
+        {
+          "name": "Qt5Widgets_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Widgets"
+        },
+        {
+          "name": "Qt5Gui_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Gui"
+        },
+        {
+          "name": "Qt5Sql_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Sql"
+        },
+        {
+          "name": "Qt5OpenGL_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5OpenGL"
+        }
+      ]
+    },
+
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [
+        "msvc_x64_x64"
+      ],
+      "buildRoot": "${env.MYSPACE}\\QtAV\\${name}",
+      "installRoot": "${env.MYSPACE}\\QtAV\\install",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_TOOLCHAIN_FILE",
+          "value": "${env.VCPKGDIR}\\scripts\\buildsystems\\vcpkg.cmake"
+        },
+        {
+          "name": "CMAKE_MODULE_PATH",
+          "value": "${env.VCPKGDIR}\\installed\\x64-windows\\share\\ffmpeg"
+        },
+        {
+          "name": "Qt5_DIR",
+          "value": "${env.QTDIR}"
+        },
+        {
+          "name": "Qt5Core_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Core"
+        },
+        {
+          "name": "Qt5Widgets_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Widgets"
+        },
+        {
+          "name": "Qt5Gui_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Gui"
+        },
+        {
+          "name": "Qt5Sql_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5Sql"
+        },
+        {
+          "name": "Qt5OpenGL_DIR",
+          "value": "${env.QTDIR}\\lib\\cmake\\Qt5OpenGL"
+        }
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "QTDIR": "C:/Qt/Qt5.11.0/5.11.0/msvc2017_64/"
+    },
+    {
+      "VCPKGDIR": "E:\\ws\\vcpkg"
+    },
+    {
+      "MYSPACE": "E:\\ws.mm.build"
+    }
+  ]
+}
+}}}
+
+
+===== example =====
 {{{code: lang="js" linenumbers="True"
 {
   // The "environments" property is an array of key value pairs of the form

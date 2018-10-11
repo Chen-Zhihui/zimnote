@@ -18,6 +18,7 @@ Created 星期四 16 八月 2018
 [[+decision_tree]]
 [[+navie_bayes]]
 [[+deep_learning]]
+[[+graph_model]]
 
 
 

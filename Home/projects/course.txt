@@ -5,9 +5,13 @@ Creation-Date: 2018-10-09T21:34:08+08:00
 ====== course ======
 Created Tuesday 09 October 2018
 
-[ ] PLN: deep learning and cv <2018-10-12
-[ ] PLN: 针对吴恩达的课程及书，写一个提纲
-[ ] PLN: 针对视觉，机器学习，西瓜书，十大算法书，写一个提纲
+PLN: deep learning and cv <2018-10-12
+PLN: 针对吴恩达的课程及书，写一个提纲
+TDO: 针对视觉，机器学习，西瓜书，十大算法书，写一个提纲
 
-[ ] Computer Vision Model Learning and inference, 有第一版书和代码，算法下载，网上能找到彩图
+BK: Computer Vision Model Learning and inference, 有第一版书和代码，算法下载，网上能找到彩图
 http://computervisionmodels.com/
+PPT讲义比书更具有提纲作用
+
+BK: 吴恩达的书稿及翻译
+https://xiaqunfeng.gitbooks.io/machine-learning-yearning/content/

@@ -9,6 +9,6 @@ Created 星期二 28 八月 2018
 
 
 ===== OpenCV API =====
-[ ] opencv api <2018-08-29~2018-09-02
+LRN: opencv api <2018-08-29~2018-09-02
 	* 基本数据类型及转换 file:///E:/ws.local/buildtree/opencv.install/doc/html/dc/d84/group__core__basic.html#ga894fe0940d40d4d65f008a2ca4e616bd
 

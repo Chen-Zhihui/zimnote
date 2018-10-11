@@ -6,16 +6,18 @@ Creation-Date: 2018-10-10T09:06:52+08:00
 
 ====== 当前状态 ======
 
-TODO: qmake编译出的可执行程序播放无误，cmake编译出的有问题，怀疑是声音处理有问题，有些功能可能没有编译进来，播放无声音视频OK
-[ ] cmake_debug_postfix + install
-[ ] 调查下引用的第三方库都起什么作用
-[ ] audio output with cmake
-[ ] 如何接过滤器从中截取图像
+TDO: qmake编译出的可执行程序播放无误，cmake编译出的有问题，怀疑是声音处理有问题，有些功能可能没有编译进来，播放无声音视频OK
+[*] cmake_debug_postfix + install
+[*] 调查下引用的第三方库都起什么作用
+[*] audio output with cmake
+[*] 如何接过滤器从中截取图像
 
 ====== QtAV ======
 
 EXP: deploy windeployqt.exe --debug Player.exe -opengl
-EXP: export windeployqt.exe  export PATH=$PATH:/c/Qt/Qt5.11.0/5.11.0/msvc2017_64/bin
+EXP: export  windeployqt.exe --debug Player.exe -opengl --qmldir /e/ws.mm/ws.mm.root/QtAV/ -qml -quick
+EXP: export  windeployqt.exe Player.exe -opengl --qmldir /e/ws.mm/ws.mm.root/QtAV/ -qml -quick
+EXP: copy libbz2.dll 
 
 ===== qmake =====
 

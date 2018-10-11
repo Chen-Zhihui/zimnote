@@ -11,9 +11,9 @@ Creation-Date: 2018-09-30T16:51:01+08:00
 ====== 周目标 ======
 
 [ ] 把jsjbdisk合并到主分枝上来，以后只用主分枝
-[ ] 有JSONListModel做数据，另外做表格控件，好像不必要，直接listmodel，加排序就行了
-[ ] 写一个有关cmake的使用办法，翻译 https://cliutils.gitlab.io/modern-cmake/chapters/install/exporting.html
-[ ] 播放器框架，从QtAV和openshot中二选一，后者依赖关系明确做为优先对象S
+UTL: 有JSONListModel做数据，另外做表格控件，好像不必要，直接listmodel，加排序就行了
+VL: 写一个有关cmake的使用办法，翻译 https://cliutils.gitlab.io/modern-cmake/chapters/install/exporting.html
+VL: 播放器框架，从QtAV和openshot中二选一，后者依赖关系明确做为优先对象S
 	[*] openshot编译，可播放
 	[ ] QtAV编译，分析结构
 
